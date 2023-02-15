@@ -13,12 +13,12 @@
 "items": [
     
         {
-            "id": "http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-based-on-machine-learning-to-assess-the-clinical-response-to-anti-pd-1-therapy",
+            "id": "http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy",
             "title": "Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy",
             "summary": null,
-            "content_text": "",
-            "content_html": "<p><img src=\"/assets/2020/01_23/canberra.png\" alt=\"adasdasdasd\" /></p>",
-            "url": "http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-based-on-machine-learning-to-assess-the-clinical-response-to-anti-pd-1-therapy",
+            "content_text": "A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program1020200076756 · Filed Jun 23, 2020summary첫페이지실제 임상 데이터를 사용. 여기에는 ~~ 등과같은 클리니털 데이터,  ~~ 유전체 데이터, ~~ 의료이미지 데이터 등등이 포함되었다.우리의 목표는 최소한의 비용으로 PD-L1 기반의 약물 예측보다 정확도가 높은 약물반응 모델을 만드는 것이다. 따라서 정확도를 최대화 한면서  피쳐 생산 비용을 최소화 해야 했다.  상관관계를 조사 해서 피쳐 탈락시킴링크  그림  그림  그림  그림",
+            "content_html": "<h2 id=\"a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program\">A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</h2><h3 id=\"1020200076756--filed-jun-23-2020\">1020200076756 · Filed Jun 23, 2020</h3><p>summary</p><p>첫페이지</p><p><img src=\"/assets/publication_patents/CDSS_main.jpg\" alt=\"main_fig\" /></p><p><img src=\"/assets/publication_patents/paper_front.png\" alt=\"front\" /></p><p>실제 임상 데이터를 사용. 여기에는 ~~ 등과같은 클리니털 데이터,  ~~ 유전체 데이터, ~~ 의료이미지 데이터 등등이 포함되었다.</p><p>우리의 목표는 최소한의 비용으로 PD-L1 기반의 약물 예측보다 정확도가 높은 약물반응 모델을 만드는 것이다. 따라서 정확도를 최대화 한면서  피쳐 생산 비용을 최소화 해야 했다.  상관관계를 조사 해서 피쳐 탈락시킴</p><p><img src=\"/assets/publication_patents/paper_tumor.png\" alt=\"tumor\" /></p><p><img src=\"/assets/publication_patents/paper_score.png\" alt=\"score\" /></p><p><img src=\"/assets/publication_patents/paper_shap_val.png\" alt=\"shap\" /></p><p>링크</p><ul>  <li>그림</li>  <li>그림</li>  <li>그림</li>  <li>그림</li></ul>",
+            "url": "http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy",
             
             
             
