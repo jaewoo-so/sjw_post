@@ -4,112 +4,13 @@
  <title>Sidey</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-02-15T15:39:31+09:00</updated>
+ <updated>2023-02-22T17:10:42+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
- 
- <entry>
-   <title>Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy</title>
-   <link href="http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy"/>
-   <updated>2022-06-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2022/06/01/Clinical decision support algorithm to anti–pd-1 therapy</id>
-   <content type="html">&lt;h2 id=&quot;a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program&quot;&gt;A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program&lt;/h2&gt;
-&lt;h3 id=&quot;1020200076756--filed-jun-23-2020&quot;&gt;1020200076756 · Filed Jun 23, 2020&lt;/h3&gt;
-
-&lt;p&gt;summary&lt;/p&gt;
-
-&lt;p&gt;첫페이지&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/CDSS_main.jpg&quot; alt=&quot;main_fig&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;실제 임상 데이터를 사용. 여기에는 ~~ 등과같은 클리니털 데이터,  ~~ 유전체 데이터, ~~ 의료이미지 데이터 등등이 포함되었다.&lt;/p&gt;
-
-&lt;p&gt;우리의 목표는 최소한의 비용으로 PD-L1 기반의 약물 예측보다 정확도가 높은 약물반응 모델을 만드는 것이다. 따라서 정확도를 최대화 한면서  피쳐 생산 비용을 최소화 해야 했다. 
- 상관관계를 조사 해서 피쳐 탈락시킴&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_tumor.png&quot; alt=&quot;tumor&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_score.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_shap_val.png&quot; alt=&quot;shap&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;링크&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;그림&lt;/li&gt;
-  &lt;li&gt;그림&lt;/li&gt;
-  &lt;li&gt;그림&lt;/li&gt;
-  &lt;li&gt;그림&lt;/li&gt;
-&lt;/ul&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</title>
-   <link href="http://localhost:4000/2020/06/23/a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program"/>
-   <updated>2020-06-23T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/06/23/A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>CTD-squared Pancancer Chemosensitivity DREAM Challenge</title>
-   <link href="http://localhost:4000/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
-   <updated>2020-06-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/06/01/CTD-squared Pancancer Chemosensitivity DREAM Challenge</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>CTD-squared Pancancer Drug Activity DREAM Challenge</title>
-   <link href="http://localhost:4000/2020/04/01/ctd-squared-pancancer-drug-activity-dream-challenge"/>
-   <updated>2020-04-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/04/01/CTD-squared Pancancer Drug Activity DREAM Challenge</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Methods for providing information about responses to cancer immunotherapy and devices using the same</title>
-   <link href="http://localhost:4000/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same"/>
-   <updated>2019-12-24T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Gimhae Fire Prediction Competition</title>
-   <link href="http://localhost:4000/2019/12/01/gimhae-fire-prediction-competition"/>
-   <updated>2019-12-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2019/12/01/Gimhae Fire Prediction Competition</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Swarm Reinforcement Learning Algorithm with Characterized Agents</title>
-   <link href="http://localhost:4000/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents"/>
-   <updated>2015-03-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2015/03/01/Swarm Reinforcement Learning Algorithm with Characterized Agents</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
  
 
 </feed>
