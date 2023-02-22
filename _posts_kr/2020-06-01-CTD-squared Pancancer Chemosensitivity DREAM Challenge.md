@@ -6,12 +6,19 @@ tags: [competitions]
 
 # Gene Expression Searching and machine learning model for Chemosensitivity Prediction
 ---
-***contents***  
+
+
+***link***    
+[official competetion site]()    
+[github-repository]()    
+
+
+***contents***
 1. Data
 2. Workflow & Key ideas
 3. Conclusion & Discussion
-4. Reference
-5. Feature Engineering
+4. Key Idea & Feature Engineering
+5. Reference
 
 - If you want to see entire predictive system concept, 
 see section 2
@@ -106,20 +113,12 @@ Since we didn't have enough time to find the optimal model, we had no choice but
 
 &nbsp;
 &nbsp;
-# 4. References
-1. CTD-squared Pancancer Chemosensitivity DREAM Challenge (syn21763589)     
-2. CTD-squared BeatAML DREAM Challenge (syn20940518)        
-3. Rees, M., Seashore-Ludlow, B., Cheah, J., Adams, D., Price, E., Gill, S., Javaid, S., Coletti, M., Jones, V., Bodycombe, N., Soule, C., Alexander, B., Li, A., Montgomery, P., Kotz, J., Hon, C., Munoz, B., Liefeld, T., Dančík, V., Haber, D., Clish, C., Bittker, J., Palmer, M., Wagner, B., Clemons, P., Shamji, A., Schreiber, S. (2016). Correlating chemical sensitivity and basal gene expression reveals mechanism of action Nature Chemical Biology  12(2), 109-116. https://dx.doi.org/10.1038/nchembio.1986     
-4. Subramanian, A., Narayan, R., Corsello, S., Peck, D., Natoli, T., Lu, X., Gould, J., Davis, J., Tubelli, A., Asiedu, J., Lahr, D., Hirschman, J., Liu, Z., Donahue, M., Julian, B., Khan, M., Wadden, D., Smith, I., Lam, D., Liberzon, A., Toder, C., Bagul, M., Orzechowski, M., Enache, O., Piccioni, F., Johnson, S., Lyons, N., Berger, A., Shamji, A., Brooks, A., Vrcic, A., Flynn, C., Rosains, J., Takeda, D., Hu, R., Davison, D., Lamb, J., Ardlie, K., Hogstrom, L., Greenside, P., Gray, N., Clemons, P., Silver, S., Wu, X., Zhao, W., Read-Button, W., Wu, X., Haggarty, S., Ronco, L., Boehm, J., Schreiber, S., Doench, J., Bittker, J., Root, D., Wong, B., Golub, T. (2017). A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles Cell 171(6), 1437 1452.e17. https://dx.doi.org/10.1016/j.cell.2017.10.049        
-5. Szalai, B., Subramanian, V., Holland, C., Alföldi, R., Pusk, L., Saez-Rodriguez, J. (2019). Signatures of cell death and proliferation in perturbation transcriptomics data—from confounding factor to effective prediction Nucleic Acids Research  47(19), 10010-10026. https://dx.doi.org/10.1093/nar/gkz805      
-6. Koras, K., Juraeva, D., Kreis, J., Mazur, J., Staub, E., Szczurek, E. (2020). Feature selection strategies for drug sensitivity prediction Scientific Reports 10(1), 9377. https://dx.doi.org/10.1038/s41598-020-65927-9     
-7. Garcia-Alonso L, Holland C, Ibrahim M, Turei D, Saez-Rodriguez J (2019). “Benchmark and integration of resources for the estimation of human transcription factor activities.” Genome Research. doi: 10.1101/gr.240663.118.      
-8. Schubert M, Klinger B, Klünemann M, Sieber A, Uhlitz F, Sauer S, Garnett MJ, Blüthgen N, Saez-Rodriguez J. “Perturbation-response genes reveal signaling footprints in cancer gene expression.” Nature Communications: 10.1038/s41467-017-02391-6        
+       
 
 
 &nbsp;
 &nbsp;
-# 5. Feature Engineering
+# 4. Key Idea & Feature Engineering
 
 **1. Data Integration**     
 Different public datasets have different gene types. Alternatively, you can use a gene set that you deem valid based on domain knowledge. Strategies other than intersection result in missing value unconditionally. Therefore, the method of imputating the missing value must also be selected.       
@@ -162,3 +161,15 @@ This is why I used AE and cosine similarity as an evaluation metric.
 Experimentally tried several feature engineering and applied them because we achieved the best CV-score.
 
 
+&nbsp; 
+&nbsp; 
+
+# 4. References
+1. CTD-squared Pancancer Chemosensitivity DREAM Challenge (syn21763589)     
+2. CTD-squared BeatAML DREAM Challenge (syn20940518)        
+3. Rees, M., Seashore-Ludlow, B., Cheah, J., Adams, D., Price, E., Gill, S., Javaid, S., Coletti, M., Jones, V., Bodycombe, N., Soule, C., Alexander, B., Li, A., Montgomery, P., Kotz, J., Hon, C., Munoz, B., Liefeld, T., Dančík, V., Haber, D., Clish, C., Bittker, J., Palmer, M., Wagner, B., Clemons, P., Shamji, A., Schreiber, S. (2016). Correlating chemical sensitivity and basal gene expression reveals mechanism of action Nature Chemical Biology  12(2), 109-116. https://dx.doi.org/10.1038/nchembio.1986     
+4. Subramanian, A., Narayan, R., Corsello, S., Peck, D., Natoli, T., Lu, X., Gould, J., Davis, J., Tubelli, A., Asiedu, J., Lahr, D., Hirschman, J., Liu, Z., Donahue, M., Julian, B., Khan, M., Wadden, D., Smith, I., Lam, D., Liberzon, A., Toder, C., Bagul, M., Orzechowski, M., Enache, O., Piccioni, F., Johnson, S., Lyons, N., Berger, A., Shamji, A., Brooks, A., Vrcic, A., Flynn, C., Rosains, J., Takeda, D., Hu, R., Davison, D., Lamb, J., Ardlie, K., Hogstrom, L., Greenside, P., Gray, N., Clemons, P., Silver, S., Wu, X., Zhao, W., Read-Button, W., Wu, X., Haggarty, S., Ronco, L., Boehm, J., Schreiber, S., Doench, J., Bittker, J., Root, D., Wong, B., Golub, T. (2017). A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles Cell 171(6), 1437 1452.e17. https://dx.doi.org/10.1016/j.cell.2017.10.049        
+5. Szalai, B., Subramanian, V., Holland, C., Alföldi, R., Pusk, L., Saez-Rodriguez, J. (2019). Signatures of cell death and proliferation in perturbation transcriptomics data—from confounding factor to effective prediction Nucleic Acids Research  47(19), 10010-10026. https://dx.doi.org/10.1093/nar/gkz805      
+6. Koras, K., Juraeva, D., Kreis, J., Mazur, J., Staub, E., Szczurek, E. (2020). Feature selection strategies for drug sensitivity prediction Scientific Reports 10(1), 9377. https://dx.doi.org/10.1038/s41598-020-65927-9     
+7. Garcia-Alonso L, Holland C, Ibrahim M, Turei D, Saez-Rodriguez J (2019). “Benchmark and integration of resources for the estimation of human transcription factor activities.” Genome Research. doi: 10.1101/gr.240663.118.      
+8. Schubert M, Klinger B, Klünemann M, Sieber A, Uhlitz F, Sauer S, Garnett MJ, Blüthgen N, Saez-Rodriguez J. “Perturbation-response genes reveal signaling footprints in cancer gene expression.” Nature Communications: 10.1038/s41467-017-02391-6 

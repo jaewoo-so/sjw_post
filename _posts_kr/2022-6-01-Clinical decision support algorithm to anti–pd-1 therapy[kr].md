@@ -8,7 +8,7 @@ tags: [publication_patents]
 ## A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program
 ### 1020200076756 · Filed Jun 23, 2020
 
-# summary 
+# Summary 
 ---
 
  Anti-programmed death (PD)-1 therapy (αPD-1) has been used in patients with non-small cell
@@ -27,7 +27,7 @@ But the drug doesn't respond to all patients. Therefore, in the case of Kitruda,
 
 우리는 다른 환자의 정보를 사용하여 약물 예측 모델을 연구하여 좀더 많은 환자들이 올바른 처방을 받고 약물 낭비에 의한 비용을 줄이려 한다. 
 
-# Summary
+# Summary Idea & Solution
 ---
 
 ## 사용된 데이터 
