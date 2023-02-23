@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<section class="posts">
+
+<h2>Test</h2>
+<ul>
+    {% for post in site.tags.test %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
+    {% endfor %}
+    </ul>
+<ul>
+
+<h2>Test2</h2>
+<ul>
+    {% for post in site.tags.test2 %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
+    {% endfor %}
+    </ul>
+<ul>
+
+<h2>Test3</h2>
+    <ul>
+        {% for post in site.posts %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
+        {% endfor %}
+        </ul>
+    <ul>
+
+
+</section>
+
