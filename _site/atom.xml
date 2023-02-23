@@ -4,13 +4,275 @@
  <title>Sidey</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-02-23T10:23:44+09:00</updated>
+ <updated>2023-02-23T10:48:49+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>ESG Media Topic Classification</title>
+   <link href="http://localhost:4000/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8"/>
+   <updated>2023-01-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/01/01/pro - 복사본</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;목적&lt;/li&gt;
+  &lt;li&gt;문제점 리스트 
+2.1 모델 개발&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;22-실제-사용&quot;&gt;2.2 실제 사용&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ESG Media Topic Classification</title>
+   <link href="http://localhost:4000/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8-copy"/>
+   <updated>2023-01-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/01/01/pro - 복사본 copy</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;목적&lt;/li&gt;
+  &lt;li&gt;문제점 리스트 
+2.1 모델 개발&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;22-실제-사용&quot;&gt;2.2 실제 사용&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ESG Media Topic Classification</title>
+   <link href="http://localhost:4000/2023/01/01/esg-media-topic-classification"/>
+   <updated>2023-01-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/01/01/ESG Media Topic Classification</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;목적&lt;/li&gt;
+  &lt;li&gt;문제점 리스트 
+2.1 모델 개발&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;22-실제-사용&quot;&gt;2.2 실제 사용&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ESG Media Topic Classification</title>
+   <link href="http://localhost:4000/2023/01/01/esg-media-ml-service-kr"/>
+   <updated>2023-01-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/01/01/ESG Media ML Service[kr]</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;
+&lt;a href=&quot;&quot;&gt;Tutorial : Simple ML Pipeline with Kubernetes + Restful API &lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Skill &amp;amp; HW
+    &lt;ul&gt;
+      &lt;li&gt;Kubernetes : Microk8s ( 1 Master + 2 Worker)&lt;/li&gt;
+      &lt;li&gt;Github Action&lt;/li&gt;
+      &lt;li&gt;Restful API : Flask&lt;/li&gt;
+      &lt;li&gt;Front : Dash for ProtoType&lt;/li&gt;
+      &lt;li&gt;DataBase : Postgres , mySQL&lt;/li&gt;
+      &lt;li&gt;GPU : RTX 3090 x 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why Kubernetes?
+    &lt;ul&gt;
+      &lt;li&gt;샘플이 많은 날 또는 간헐적 네트워크 문제가 발생 시 사람이 매번 모니터링 후 수리를 해야 했다. 
+따라서 Self-Healing이 가능한 쿠버네티스로 이러한 모니터링 및 수리를 자동화 하여서 인건비를 감소시킴.&lt;/li&gt;
+      &lt;li&gt;추후 대규모 트래픽이 발생 할 수 있어서, Load Balance 기능이 필요했다.&lt;/li&gt;
+      &lt;li&gt;grafana 등의 모니터링 기능을 편리하게 세팅 가능.&lt;/li&gt;
+      &lt;li&gt;1인 개발의 리소스 제한에도 불구하고 많은 유용한 기능을 쉽게 구현이 가능하다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why Github Action?
+    &lt;ul&gt;
+      &lt;li&gt;Github Action으로 개발 서버에서 도커 이미지 및 manaifest commit - push 만으로 서비스 서버에서 바로 기능이 적용 될 수 있도록 구성.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why Restful-API?
+    &lt;ul&gt;
+      &lt;li&gt;추후 서비스 확장을 계획하고 있고, 기능 단위로 분리하여 기존의 기능을 재사용 할 수 있도록 구성했다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;시스템 요소
+    &lt;ul&gt;
+      &lt;li&gt;시스템 구성도 작성&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;실제 서비스 화면&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소.png&quot; alt=&quot;&quot; /&gt;
+&amp;lt;/br&amp;gt;
+&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_이슈종합분석.png&quot; alt=&quot;&quot; /&gt;
+&amp;lt;/br&amp;gt;
+&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_기업모니터링.png&quot; alt=&quot;&quot; /&gt;
+&amp;lt;/br&amp;gt;
+&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_데이터센터.png&quot; alt=&quot;&quot; /&gt;
+&amp;lt;/br&amp;gt;
+&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_기업뉴스조회.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ESG Media Topic Classification</title>
+   <link href="http://localhost:4000/2023/01/01/colorectal-cancer-h-e-staining-glass-image"/>
+   <updated>2023-01-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/01/01/Colorectal cancer H&E staining glass image </id>
+   <content type="html">&lt;p&gt;[2018.11-2019.03] Colorectal cancer H&amp;amp;E staining glass image 이미지를 이용한 용종 분류&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CNN기반의 colorectal cancer cell segmentation 모델 개발.&lt;/li&gt;
+  &lt;li&gt;H&amp;amp;E staining glass image의 전 처리 및 트레이닝 코드 개발 및 라이브러리화.&lt;/li&gt;
+  &lt;li&gt;선행 연구로서 camelyon16,17 데이터로 breast cancer에 대한 모델 만든 후 transfer learning시행.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy</title>
+   <link href="http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy-kr"/>
+   <updated>2022-06-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2022/06/01/Clinical decision support algorithm to anti–pd-1 therapy[kr]</id>
+   <content type="html">&lt;h2 id=&quot;a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program&quot;&gt;A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program&lt;/h2&gt;
+&lt;h3 id=&quot;1020200076756--filed-jun-23-2020&quot;&gt;1020200076756 · Filed Jun 23, 2020&lt;/h3&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Anti-programmed death (PD)-1 therapy (αPD-1) has been used in patients with non-small cell
+lung cancer (NSCLC), leading to improved outcomes. However, the outcomes of therapy are still
+insufficient, and the expression of PD-ligand 1 (PD-L1) is not always a predictor of response to
+αPD-1.&lt;/p&gt;
+
+&lt;p&gt;NSCLC의 치료 목적으로 사용되는 면역 항암제는 일반적으로 키트루다와 옵티보이다.
+한 달 치료비는 각각 약 60만 달러와 80만 달러이며, 연간 거의 천만 달러의 비용이 든다.
+ The immuno-cancer drugs used for treatment purposes of NSCLC are typically Kitruda and Optivo.
+Each monthly treatment costs about $600,000 and $800,000, respectively, and costs nearly $10 million a year.&lt;/p&gt;
+
+&lt;p&gt;하지만 모든 환자에게 약물이 반응하지 않는다. 따라서 키트루다의 경우 PD-L1 발현 양성 비율’이 50% 이상이어야 처방을 받을 수 있다.하지만 조건이 만족되어 처방을 받아도 실제 약물반응은 약 60% 대 이다. 
+But the drug doesn’t respond to all patients. Therefore, in the case of Kitruda, the ‘PD-L1 expression positive rate’ must be 50% or more to be prescribed. However, even if the conditions are satisfied and prescribed, the actual drug reaction is about 60%.&lt;/p&gt;
+
+&lt;p&gt;우리는 다른 환자의 정보를 사용하여 약물 예측 모델을 연구하여 좀더 많은 환자들이 올바른 처방을 받고 약물 낭비에 의한 비용을 줄이려 한다.&lt;/p&gt;
+
+&lt;h1 id=&quot;summary-idea--solution&quot;&gt;Summary Idea &amp;amp; Solution&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;사용된-데이터&quot;&gt;사용된 데이터&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;clinical data including patient characteristics,&lt;/li&gt;
+  &lt;li&gt;mutations&lt;/li&gt;
+  &lt;li&gt;laboratory findings from the electronic medical records&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;데이터&quot;&gt;데이터&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;missing value가 대부분의 피쳐에 존재. 단순 mean, zero 등의 방법이 아닌, 다른 피쳐 및 해당 피쳐의 non-missing value의 분포를 기준으로 inputation 모델을 별로도 학습.&lt;/li&gt;
+  &lt;li&gt;Data leakage가 발생하지 않도록, 임상의사에게 직접 검토를 받았다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;feature-enegineering&quot;&gt;Feature Enegineering&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;유전자 데이터의 경우 Sparse 특성이 있었다. -&amp;gt; Binary 형태의 관련성 있는 유전자 발현 여부를 나타내는 새로운 Feature 생성&lt;/li&gt;
+  &lt;li&gt;Neutrophil 및 Lymphocyte의 경우는 비율인 LNR(lymphocyte-to-neutrophil ratio) 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;모델-선택-및-검증&quot;&gt;모델 선택 및 검증&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;모델의 적절한 복잡성을 찾기 위해 리니어 모델도 포함하여 모델 선택 진행.&lt;/li&gt;
+  &lt;li&gt;샘플 수가 적어서 모델 선택에는 LOOCV 사용&lt;/li&gt;
+  &lt;li&gt;분야 특성상 어느정도의 설명력이 필요하여, 성능 극대화를 위한 앙상블 단계를 진행하지 않음.&lt;/li&gt;
+  &lt;li&gt;LOOCV 결과로 어느정도 아웃라이어로 보이는 샘플들을 발견. (4개의 샘플)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;모델-기반-피쳐-분석&quot;&gt;모델 기반 피쳐 분석&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터간의 interaction 효과가 있을 가능성이 매우 높다.&lt;/li&gt;
+  &lt;li&gt;따라서 단순 entropy기반의 피쳐 중요도는 해석에 오류가 생길 가능성이 높음.&lt;/li&gt;
+  &lt;li&gt;Lime 기반의 explanation model은 샘플수가 적어서, local model 피팅에 문제가 생길 여지가 많다고 판단.&lt;/li&gt;
+  &lt;li&gt;각 샘플 대상으로 shap value의 평균 및 interaction value를 계산했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/CDSS_main.jpg&quot; alt=&quot;main_fig&quot; /&gt;
+&lt;img src=&quot;/assets/publication_patents/paper_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;detail&quot;&gt;Detail&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;feature-engineering&quot;&gt;Feature engineering&lt;/h2&gt;
+
+&lt;h3 id=&quot;gene-metastasis-feature&quot;&gt;Gene&amp;amp; Metastasis Feature&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Sparsity&lt;/strong&gt;
+일반적으로 많이 사용되는 sparsity 판단 기준으로 판단시, zero value의 비율에 의한 sparsity가 있다고 판단되었다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Percentage of zero values : 데이터 타입이 발현 유무의 Bianry 타입 $ Gene \ {0,1}$. 최소 85% ~ 최대 95%의 zero value가 보인다. 따라서 sparse하다고 판단.&lt;/li&gt;
+  &lt;li&gt;Number of observations : observations에 의한 sparse는 보이지 않는다.&lt;/li&gt;
+  &lt;li&gt;Variability of data : 바이너리이기 때문에 Percenrage of zero 와 같은 결론이 나온다. Sparse하다&lt;/li&gt;
+  &lt;li&gt;Model performance: 샘플 수의 한계로 판단이 불가&lt;/li&gt;
+  &lt;li&gt;Domain knowledge : 대한 유전자 발현에 대한 정확한 통계가 없으므로, Domain knowledge 기준으로 sparsity를 판단 할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sparsity를 감소키기위해서 유전자 피쳐를 관련 유전자의 총 발현량 수를 나타내는 새로운 피쳐로 변경 
+\(\text{driver oncogene} = \sum{ \text{gene expression}}\)&lt;/li&gt;
+  &lt;li&gt;Metastasis 도 같은 방식으로 총 Metastasis로 변경 
+\(\text{metastasis count} = \sum{ \text{metastasis present}}\)&lt;/li&gt;
+  &lt;li&gt;Neutrophil 및 Lymphocyte은 LNR(lymphocyte-to-neutrophil ratio) 피쳐로 대체했다. 
+\(LNR = log(\frac{Neutrophil}{Lymphocyte} + \epsilon )\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;model-selection&quot;&gt;Model Selection&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;아래는 8개의 모델의 roc-auc score 비교 표 이다. LOOCV (Leave one out CV)로 검증을 하였다. 
+예측에 필요한 모델은 높게 복잡하지 않아도 되는것으로 판단되었다. 따라서 모델 앙상블은 하지 않고 싱글 모델만 비교했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_compare.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;best-model-performance&quot;&gt;Best Model Performance&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_score.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;feature-attribution&quot;&gt;Feature Attribution&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;모든 샘플의 SHAP value 평균값이다. 
+Shap value는 게임이론 관점에서, 한 피쳐의 및 다른 피쳐와의 시너지 효과까지 고려한 모델의 예측 값에 대한 기여도이다. 
+의료, 바이오 분야의 데이터는 독립성을 주장하기 어려운 피쳐들이기 때문에 SHAP 값 기반의 해석이 적절하다고 판단했다. 
+&lt;img src=&quot;/assets/publication_patents/paper_shap_val.png&quot; alt=&quot;shap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;결과를 보면 The persence of non-measurable lesions가 타겟값과의 correlation이 높을 수도 있다는 의심을 했다. 따라서 
+The persence of non-measurable lesions 의 경우 오디너리 형식의 데이터이므로, spearman correlation을 살펴본다. 
+correlation = -0.44 , p-value = 8.1e-11 이 나왔다. 즉, strong relationship이 아니므로 feature로 사용하였다.&lt;/p&gt;
+
+&lt;!-- 반응 여부 : 바이너리, lesions은 오디너리 형식(0,0.5,1)  
+correlation을 스피어만 , 피어슨중 골라야함. 
+설명을 하면 
+스피어만은 monotonic relationship, 피어슨은 linear relationship 이 있는지를 보는 것이다. 
+모노토닉은 한 변수가 증가할때 다른 변수도 증가하는지 여부만 보는것. 
+linear는 한변수가 1증가시 다른변수도 같은양인 1로 증가하는지, 증가 폭도 같이 보는것이다. (양적관계도 포함되어있다.)
+ --&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy</title>
@@ -104,12 +366,12 @@ Each monthly treatment costs about $600,000 and $800,000, respectively, and cost
 &lt;h2 id=&quot;model-selection&quot;&gt;Model Selection&lt;/h2&gt;
 &lt;p&gt;Below is a comparison table of the eight models of the roc-auc score. It was evaluated with LOOCV (Leave one out CV).
 It was judged that the model required for prediction did not have to be highly complex. Therefore, we did not do model ensembles and compared only single models.&lt;br /&gt;
-&lt;img src=&quot;/assets/publication_patents/paper_compare.png&quot; alt=&quot;score&quot; /&gt;
+&lt;img src=&quot;/assets/paper_cdss/paper_compare.png&quot; alt=&quot;score&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Best Model Performance : LightGBM&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_score.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/paper_cdss/paper_score.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -120,11 +382,242 @@ It was judged that the model required for prediction did not have to be highly c
 Shap is the contribution to the predicted value of a model considering the synergistic effect of one feature and another feature, from the point of view of game theory. &lt;br /&gt;
 Since the data in the medical and bio fields are features that are difficult to assert independence, it was judged that SHAP value-based interpretation was appropriate.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/publication_patents/paper_shap_val.png&quot; alt=&quot;shap&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/paper_cdss/paper_shap_val.png&quot; alt=&quot;shap&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looking at the results, I suspected that the persistence of non-measurable lesions might have a high correlation with the target value. Thus, the persistence of non-measurable lesions is an ordinary type of data, so we look at spearman correlation.
 correlation = -0.44 and p-value = 8.1e-11. That is, it was not a strong relationship, so it was used as a feature.&lt;/p&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</title>
+   <link href="http://localhost:4000/2020/06/23/a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program"/>
+   <updated>2020-06-23T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2020/06/23/A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</id>
+   <content type="html">&lt;p&gt;1020200076756 · Filed Jun 23, 2020&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;'./assets/../../../assets/publication_patents/patent_pdl1/patent_pdl1_front.png'&quot;&gt;Front&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;[2018.05-2018.07] TCGA,GEO데이터를 이용해 33종 암의 primary site 예측 및 similarity mapping 모델 연구&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모델 성능 측정 방법 디자인을 위한 데이터 shift 분석&lt;/li&gt;
+  &lt;li&gt;gene expression을 이용한 예측 모델 개발(deep learning모델, GBDT모델, SVM, 선형모델 등 비교)&lt;/li&gt;
+  &lt;li&gt;multi-minority 문제 해결을 위한 gene expression, DNA methylation, microRNA expression 의 비교.&lt;/li&gt;
+  &lt;li&gt;cell type별 및 다른 시퀀싱 파이프라인 데이터를 사용해 교차검증 진행.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data&quot;&gt;Data&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;RNA, mRNA, methylation&lt;/li&gt;
+  &lt;li&gt;전이암 환자들의 원발 부위 정보&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;summary-idea--solution&quot;&gt;Summary Idea &amp;amp; Solution&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;피쳐 Selection이 핵심. 모든 피쳐가 같은 타입,특징이다.&lt;/li&gt;
+  &lt;li&gt;피쳐 수 80만개 이상, 샘플 수를 적절하게 줄여야 한다.&lt;/li&gt;
+  &lt;li&gt;다음의 기준으로 샘플 수를 줄여 나갈 수 있다. 아래 방법은 모두 효과가 있는 것을 확인했다.
+    &lt;ul&gt;
+      &lt;li&gt;sparsity&lt;/li&gt;
+      &lt;li&gt;standard_diviation&lt;/li&gt;
+      &lt;li&gt;entorpy / gini ( tree 기반의 모델에서 얻을 수 있다. ) : consistancy 보장이 안된다는 단점이 있다.&lt;/li&gt;
+      &lt;li&gt;lime or shap : 연산시간의 오래걸리는 단점이 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;대부분의 피쳐가 sparse하다.&lt;/li&gt;
+  &lt;li&gt;실제로 모델로 tissue origin을 찾아야 한다.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;detail&quot;&gt;Detail&lt;/h1&gt;
+
+&lt;p&gt;샘플 수 대비 성능 등의 그래프 를 올리면 좋을듯.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CTD-squared Pancancer Chemosensitivity DREAM Challenge</title>
+   <link href="http://localhost:4000/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
+   <updated>2020-06-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2020/06/01/CTD-squared Pancancer Chemosensitivity DREAM Challenge</id>
+   <content type="html">&lt;h1 id=&quot;gene-expression-searching-and-machine-learning-model-for-chemosensitivity-prediction&quot;&gt;Gene Expression Searching and machine learning model for Chemosensitivity Prediction&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;link&lt;/em&gt;&lt;/strong&gt;  &lt;br /&gt;
+&lt;a href=&quot;&quot;&gt;official competetion site&lt;/a&gt;  &lt;br /&gt;
+&lt;a href=&quot;&quot;&gt;github-repository&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;contents&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Data&lt;/li&gt;
+  &lt;li&gt;Workflow &amp;amp; Key ideas&lt;/li&gt;
+  &lt;li&gt;Conclusion &amp;amp; Discussion&lt;/li&gt;
+  &lt;li&gt;Key Idea &amp;amp; Feature Engineering&lt;/li&gt;
+  &lt;li&gt;Reference&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you want to see entire predictive system concept, 
+see section 2&lt;/li&gt;
+  &lt;li&gt;If you want to detail of machine learning strategies, see section 5&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The data used in this work are all public data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In the middle, we changed the working environment to the AWS environment. The code for this repository is still unorganized, so it can be messy. And because the data is very large, I didn’t put it in the repository.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+&lt;h1 id=&quot;1-data&quot;&gt;1. Data&lt;/h1&gt;
+
+&lt;h3 id=&quot;used-dataset&quot;&gt;&lt;strong&gt;Used Dataset&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;CCLE basal expression &amp;amp; meta info&lt;/li&gt;
+  &lt;li&gt;L1000 phase1, phase2 lv.5&lt;/li&gt;
+  &lt;li&gt;CTRP AUC&lt;/li&gt;
+  &lt;li&gt;DEMETER2 normalized dependency score for 515 cell lines&lt;/li&gt;
+  &lt;li&gt;PANACEA gene expression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;preprocessing&quot;&gt;&lt;strong&gt;Preprocessing&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Use the following five data to describe the characteristics of the cell line.
+Histology and basal expressions for 515 cell lines in CCLE ,
+TF activity inference score and Pathway inference score were calculated from the CCLE basal expression value using Viper. PROGENy, respectively.
+The NA values within the DEMETER2 score were imputed with average values per cell lines.&lt;/p&gt;
+
+&lt;p&gt;For the data to describe the characteristics of the drug, only post-treatment expression values were used.
+Signatures for overlapping 326 drugs in CTRP and L1000 are selected and only 973 experimentally measured genes were used to normalize by MODZ.
+The given PANACEA expression values were also normalized by the MODZ method across the cell lines.&lt;/p&gt;
+
+\[\mathcal{D_f} = \{  (x_i,y_i) \vert  f \in F\}\]
+
+&lt;p&gt;where $y$ is auc value of perturbation, $x_i$ is feature of each sample.&lt;/p&gt;
+
+&lt;p&gt;$\mathcal{S}$ is feature class, $\mathcal{S} = {TF,PRO,HIST,GENE,CCLE,D2_{mean} }$, $\mathcal{F}$ is  feature set, $\mathcal{F} = {f_i \vert  i \in S }$&lt;/p&gt;
+
+\[f^* = \{ TF,HIST,GENE,CCLE,D2_{mean} \}\]
+
+&lt;p&gt; 
+ &lt;/p&gt;
+&lt;h1 id=&quot;2-workflow--key-ideas&quot;&gt;2. Workflow &amp;amp; Key ideas&lt;/h1&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id=&quot;step1-searching-similar-drugs-for-hidden-drugs&quot;&gt;Step1. Searching similar drugs for hidden drugs&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;First, we performed the gene expression signature search via spearman correlation calculation. 
+As a reference data, L1000, which was signaturized for each drug through MODZ, and PANACEA was used as a query for this. The similarity between drugs was calculated by spearman correlation. We chose similar drugs with the following criteria. 
+By calculating robust z-score for the similarity matrix, only drugs corresponding to more than 70% of the max value of z-score were collected for each query drug. For example, for the above method, there are 7 and 19 drugs selected as drugs similar to cmpd_KW and cmpd_WW, respectively.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;400&quot; src=&quot;./img/z_score_thereshold.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id=&quot;step2-modeling--prediction&quot;&gt;Step2. Modeling &amp;amp; Prediction&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;As shown above, a drug-specific model was created using only the selected perturbations for each hidden drug.
+The model approached the regression problem using the GBDT to predict the AUC value according to the cell line-drug pairs given in the CTRP and used features describing the above mentioned. 
+We use CART for base learner with histogram optimized approximate greedy algorithm.  We finally found out that roughly 3000 features exhibited the best performance, and we actually saw that performance was not significantly reduced even if we reduced to 7 feature sets through dimension reduction.  The most efficient dimensional reduction model was the Autoencoder model with MSE + Correlation*0.7 as the objective, but due to the complicated analysis, we use the gradient boosting method with the CART for base learner and use a very small number of sampled features. And by overfitting each prediction model to a specific set of drugs,  final ensemble model had better generalization performance since the diversity of models increased.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;800&quot; src=&quot;./img/structure.png&quot; alt=&quot;Material Bread logo&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id=&quot;step3-ensemble&quot;&gt;Step3. Ensemble&lt;/h3&gt;
+&lt;p&gt;For generalization performance, we implemented a model ensemble. Using the results of varying the threshold value from 20% to 90% of max with z-score as shown above, correlation between the results of each model was compared. 
+To use more diverse models, eight models were finally selected in the order in which they were less correlated with each other, and the predicted results were integrated to create a final presentation file.
+Detail procedure is like this.&lt;/p&gt;
+
+&lt;p&gt;\(\mathcal{M} \textrm{ is set of models,} \mathcal{M} := \{ M_1 , \cdots , M_n \}, \mathcal{D} : \mathcal{M} \times  \mathcal{M} \rightarrow \mathcal{R} \textrm{ is distance function}\) 
+and we define average distance over each model.&lt;/p&gt;
+
+\[\mathcal{D}_{avg}(M_i) = \frac{1}{| \mathcal{M} \setminus { \{i\} }  |}  \sum_{m \in \mathcal{M} \backslash {\{i\}} } \mathcal{D}(M_i,m)\]
+
+&lt;p&gt;next, we select candidate for ensemble .&lt;/p&gt;
+
+\[\mathcal{M}_{candidate} :=\{  \mathcal{M}_i | \mathcal{D}_{avg}(M_i) \ngeq \textrm{ 90th percentile} \}\]
+
+&lt;p&gt;finaly, define of ensemble score is like below .&lt;/p&gt;
+
+\[S_{ensemble} = exp( \frac{1}{|\mathcal{M}_{candidate}|}  \sum_{m \in \mathcal{M}_{candidate}} log( \mathcal{D}_{avg}(m)) )\]
+
+&lt;p&gt; 
+ &lt;/p&gt;
+&lt;h1 id=&quot;3-conclusion--discussion&quot;&gt;3. Conclusion &amp;amp; Discussion&lt;/h1&gt;
+&lt;p&gt;We started from the assumption that we could deduce the MoA of the drug via post-treatment gene expression on the drug.
+It is difficult to predict drug sensitivities that have specific targets and specific pathways(Koras, K et al. 2020). So, we recognized the need to make models for each drug, and we tried many things, such as looking at which gene has high coefficient for each drug by predicting AUC with only gene expression, in addition to the methods described above. Our experiments have also shown that it is better to make a model for each drugs than to use one model predicting the AUC for all drugs.
+Each cell line has its own unique characteristics, so it is very meaningful to use it as a feature that can explain it. Predicting the drug sensitivities for each cell line will be very useful in selecting cell lines in experimental screening and also valuable in the field of new drug development in reducing costs.
+Since we didn’t have enough time to find the optimal model, we had no choice but to use the naive experimental results, so I think we can improve the predictive performance through more accurate experiments.&lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+&lt;h1 id=&quot;4-key-idea--feature-engineering&quot;&gt;4. Key Idea &amp;amp; Feature Engineering&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Data Integration&lt;/strong&gt;   &lt;br /&gt;
+Different public datasets have different gene types. Alternatively, you can use a gene set that you deem valid based on domain knowledge. Strategies other than intersection result in missing value unconditionally. Therefore, the method of imputating the missing value must also be selected.     &lt;br /&gt;
+ In this project, we compared two methods using gene sets judged to be valid through intersection and paper search, and found that the performance of intersection is similar. Therefore, we used an intersection geneset with a small data size. (973 genes.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Demesional reduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unable to find any studies for manifolds of data between total expression amount + chemical reaction amount. Therefore, Autoencoder was used.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use cosine similarity and pearsons R as the evaluation metric. In a situation where the process of generating genetic data is not guaranteed to be the same, it is difficult to normalize when operating between different dataset. Therefore, Cosine similarity was used as the main and Pearson correlation coefficient was used as an adjunct.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;VAE vs AE comparison. (see ‘/code_clean/st_04_mapping_drug_378norm_ctrp_auto_encoder/’)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;600&quot; src=&quot;./img/vae_ae.png&quot; alt=&quot;Material Bread logo&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why perform demesional reduction and use cosine similarity for AE?&lt;/strong&gt;  &lt;br /&gt;
+-&amp;gt; I found that the genomic data we use is biased by sequencing machines and processes in training machine learning models. This was previously based on cancer tumor classification tests and genomic data.  &lt;br /&gt;
+ 
+These differences mainly occur in relative expression amounts, and it was experimentally found that the types of genes expressed are generally consistent.  &lt;br /&gt;
+ 
+This is why I used AE and cosine similarity as an evaluation metric.&lt;/p&gt;
+
+&lt;p&gt;      &lt;br /&gt;
+&lt;strong&gt;Why not UMAP(Uniform Manifold Approximation and Projection)?&lt;/strong&gt;&lt;br /&gt;
+ -&amp;gt; In the case of UMAP, it is necessary to design a quality evaluation method of the pre-distance metric, search for the optimal metric, and optimize the projection parameters. And since the model description is not necessary for this competition, it was not used for the sake of time.&lt;/p&gt;
+
+&lt;p&gt;   &lt;br /&gt;
+&lt;strong&gt;Why not linear dimensionality reduction (like PCA, NMF)?&lt;/strong&gt;  &lt;br /&gt;
+ -&amp;gt; Because the data is high-dimensional and sparse, the linear method does not fit.&lt;/p&gt;
+
+&lt;p&gt;   &lt;br /&gt;
+&lt;strong&gt;3. DNN encoder feature&lt;/strong&gt;    &lt;br /&gt;
+-&amp;gt; It is a method determined in the engineering process to create optimal features.  &lt;br /&gt;
+ 
+Experimentally tried several feature engineering and applied them because we achieved the best CV-score.&lt;/p&gt;
+
+&lt;p&gt;  
+ &lt;/p&gt;
+
+&lt;h1 id=&quot;4-references&quot;&gt;4. References&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;CTD-squared Pancancer Chemosensitivity DREAM Challenge (syn21763589)&lt;/li&gt;
+  &lt;li&gt;CTD-squared BeatAML DREAM Challenge (syn20940518)&lt;/li&gt;
+  &lt;li&gt;Rees, M., Seashore-Ludlow, B., Cheah, J., Adams, D., Price, E., Gill, S., Javaid, S., Coletti, M., Jones, V., Bodycombe, N., Soule, C., Alexander, B., Li, A., Montgomery, P., Kotz, J., Hon, C., Munoz, B., Liefeld, T., Dančík, V., Haber, D., Clish, C., Bittker, J., Palmer, M., Wagner, B., Clemons, P., Shamji, A., Schreiber, S. (2016). Correlating chemical sensitivity and basal gene expression reveals mechanism of action Nature Chemical Biology  12(2), 109-116. https://dx.doi.org/10.1038/nchembio.1986&lt;/li&gt;
+  &lt;li&gt;Subramanian, A., Narayan, R., Corsello, S., Peck, D., Natoli, T., Lu, X., Gould, J., Davis, J., Tubelli, A., Asiedu, J., Lahr, D., Hirschman, J., Liu, Z., Donahue, M., Julian, B., Khan, M., Wadden, D., Smith, I., Lam, D., Liberzon, A., Toder, C., Bagul, M., Orzechowski, M., Enache, O., Piccioni, F., Johnson, S., Lyons, N., Berger, A., Shamji, A., Brooks, A., Vrcic, A., Flynn, C., Rosains, J., Takeda, D., Hu, R., Davison, D., Lamb, J., Ardlie, K., Hogstrom, L., Greenside, P., Gray, N., Clemons, P., Silver, S., Wu, X., Zhao, W., Read-Button, W., Wu, X., Haggarty, S., Ronco, L., Boehm, J., Schreiber, S., Doench, J., Bittker, J., Root, D., Wong, B., Golub, T. (2017). A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles Cell 171(6), 1437 1452.e17. https://dx.doi.org/10.1016/j.cell.2017.10.049&lt;/li&gt;
+  &lt;li&gt;Szalai, B., Subramanian, V., Holland, C., Alföldi, R., Pusk, L., Saez-Rodriguez, J. (2019). Signatures of cell death and proliferation in perturbation transcriptomics data—from confounding factor to effective prediction Nucleic Acids Research  47(19), 10010-10026. https://dx.doi.org/10.1093/nar/gkz805&lt;/li&gt;
+  &lt;li&gt;Koras, K., Juraeva, D., Kreis, J., Mazur, J., Staub, E., Szczurek, E. (2020). Feature selection strategies for drug sensitivity prediction Scientific Reports 10(1), 9377. https://dx.doi.org/10.1038/s41598-020-65927-9&lt;/li&gt;
+  &lt;li&gt;Garcia-Alonso L, Holland C, Ibrahim M, Turei D, Saez-Rodriguez J (2019). “Benchmark and integration of resources for the estimation of human transcription factor activities.” Genome Research. doi: 10.1101/gr.240663.118.&lt;/li&gt;
+  &lt;li&gt;Schubert M, Klinger B, Klünemann M, Sieber A, Uhlitz F, Sauer S, Garnett MJ, Blüthgen N, Saez-Rodriguez J. “Perturbation-response genes reveal signaling footprints in cancer gene expression.” Nature Communications: 10.1038/s41467-017-02391-6&lt;/li&gt;
+&lt;/ol&gt;
 </content>
  </entry>
  
@@ -304,6 +797,36 @@ Experimentally tried several feature engineering and applied them because we ach
  </entry>
  
  <entry>
+   <title>CTD-squared Pancancer Drug Activity DREAM Challenge</title>
+   <link href="http://localhost:4000/2020/04/01/ctd-squared-pancancer-drug-activity-dream-challenge"/>
+   <updated>2020-04-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2020/04/01/CTD-squared Pancancer Drug Activity DREAM Challenge</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Methods for providing information about responses to cancer immunotherapy and devices using the same</title>
+   <link href="http://localhost:4000/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same-kr"/>
+   <updated>2019-12-24T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same[kr]</id>
+   <content type="html">&lt;h2 id=&quot;info&quot;&gt;Info&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;10-2021-0081547&lt;/li&gt;
+  &lt;li&gt;Filed Dec 24, 2019&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;아래의 링크로 확인하세요.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;'../../../__posts/2022-6-01-Clinical%20decision%20support%20algorithm%20to%20anti%E2%80%93pd-1%20therapy.md'&quot;&gt;post&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.ejcancer.com/article/S0959-8049(21)00328-2/fulltext#%20&quot;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;
+&lt;img src=&quot;'../../../assets/publication_patents/patent_pdl1/patent_pdl1_front.png'&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Methods for providing information about responses to cancer immunotherapy and devices using the same</title>
    <link href="http://localhost:4000/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same"/>
    <updated>2019-12-24T00:00:00+09:00</updated>
@@ -314,13 +837,37 @@ Experimentally tried several feature engineering and applied them because we ach
   &lt;li&gt;Filed Dec 24, 2019&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Please refer to the following link&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;'../../../__posts/2022-6-01-Clinical%20decision%20support%20algorithm%20to%20anti%E2%80%93pd-1%20therapy.md'&quot;&gt;post&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.ejcancer.com/article/S0959-8049(21)00328-2/fulltext#%20&quot;&gt;paper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Please refer to the following link&lt;/em&gt;&lt;/strong&gt;
+&lt;a href=&quot;/__posts/2022-6-01-Clinical decision support algorithm to anti–pd-1 therapy.md&quot;&gt;Post&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.ejcancer.com/article/S0959-8049(21)00328-2/fulltext#%20&quot;&gt;Paper&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;/br&amp;gt;
-&lt;img src=&quot;'../../../assets/publication_patents/patent_pdl1/patent_pdl1_front.png'&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;patent-cover&quot;&gt;Patent Cover&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/patent_pd/patent_pdl1_front.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Gimhae Fire Prediction Competition</title>
+   <link href="http://localhost:4000/2019/12/01/gimhae-fire-prediction-competition"/>
+   <updated>2019-12-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2019/12/01/Gimhae Fire Prediction Competition</id>
+   <content type="html">&lt;p&gt;please go to below link for code and detail explain.
+&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;go to repository&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Swarm Reinforcement Learning Algorithm with Characterized Agents</title>
+   <link href="http://localhost:4000/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents"/>
+   <updated>2015-03-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2015/03/01/Swarm Reinforcement Learning Algorithm with Characterized Agents</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
+
 </content>
  </entry>
  

@@ -4,30 +4,37 @@ layout: default
 
 <section class="posts">
 
-<h2>Test</h2>
+<h2>2022 year</h2>
 <ul>
-    {% for post in site.tags.test %}
+    {% for post in site.tags.2022year %}
     <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
     {% endfor %}
     </ul>
 <ul>
 
-<h2>Test2</h2>
+<h2>2021 year</h2>
 <ul>
-    {% for post in site.tags.test2 %}
+    {% for post in site.tags.2021year %}
     <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
     {% endfor %}
     </ul>
 <ul>
 
-<h2>Test3</h2>
-    <ul>
-        {% for post in site.posts %}
-        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
-        {% endfor %}
-        </ul>
-    <ul>
+<h2>Competitions</h2>
+<ul>
+    {% for post in site.tags.competitions %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
+    {% endfor %}
+    </ul>
+<ul>
 
+<h2>Publication and Patents</h2>
+<ul>
+    {% for post in site.tags.publication_patents %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
+    {% endfor %}
+    </ul>
+<ul>
 
 </section>
 

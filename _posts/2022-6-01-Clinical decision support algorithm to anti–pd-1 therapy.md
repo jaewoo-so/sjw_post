@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy"
-tags: [test]
+tags: [publication_patents]
 ---
 
 
@@ -84,12 +84,12 @@ $$LNR = log(\frac{Neutrophil}{Lymphocyte} + \epsilon )$$
 ## Model Selection
 Below is a comparison table of the eight models of the roc-auc score. It was evaluated with LOOCV (Leave one out CV).
 It was judged that the model required for prediction did not have to be highly complex. Therefore, we did not do model ensembles and compared only single models.  
-![score](/assets/publication_patents/paper_compare.png)
+![score](/assets/paper_cdss/paper_compare.png)
 <br/>
 
 **Best Model Performance : LightGBM**
 
-![score](/assets/publication_patents/paper_score.png)
+![score](/assets/paper_cdss/paper_score.png)
 
 <br/>
 
@@ -101,7 +101,7 @@ It is the average value of the SHAP value of all samples.
 Shap is the contribution to the predicted value of a model considering the synergistic effect of one feature and another feature, from the point of view of game theory.   
 Since the data in the medical and bio fields are features that are difficult to assert independence, it was judged that SHAP value-based interpretation was appropriate.    
 
-![shap](/assets/publication_patents/paper_shap_val.png)
+![shap](/assets/paper_cdss/paper_shap_val.png)
 
 
 Looking at the results, I suspected that the persistence of non-measurable lesions might have a high correlation with the target value. Thus, the persistence of non-measurable lesions is an ordinary type of data, so we look at spearman correlation.
