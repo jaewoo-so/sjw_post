@@ -35,31 +35,27 @@ Model
 ## 3. Why Github Action?
 - Github Action으로 개발 서버에서 도커 이미지 및 manaifest commit - push 만으로 서비스 서버에서 바로 기능이 적용 될 수 있도록 구성. 
 
- 
+## 4. System Design 
+![kubernetes_pipeline](/assets/esg_media/pipeline/kube_pipeline_trans.png)
 
-## 4. 시스템 요소 
-- 시스템 구성도 작성 
+## 4. Real Service Screen 
 
+**Front**
+![front](/assets/esg_media/webpage/kresg_front.png)    
+\
 
+**ESG Issue Analysis**
+![issue_analysis](/assets/esg_media/webpage/kresg_issue.png)    
+\
 
+**Target Company Monitoring**
+![monitoring](/assets/esg_media/webpage/kresg_monitoring.png)    
+\
 
+**Target Company News List**
+![news](/assets/esg_media/webpage/kresg_news_list.png)    
+\ 
 
-
-5. 실제 서비스 화면 
-
-![](../assets/esg_mdedia/webpage/한국ESG연구소.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_이슈종합분석.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_기업모니터링.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_데이터센터.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_기업뉴스조회.png)
-
-
-
-
-
-
+**Data Center**
+![data_center](/assets/esg_media/webpage/kresg_datacenter.png)    
 

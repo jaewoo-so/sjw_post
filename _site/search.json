@@ -6,7 +6,7 @@
       "description" : "",
       "url"      : "/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8",
       "category" : "",
-      "tags"     : "project",
+      "tags"     : "",
       "date"     : "2023-01-01 00:00:00 +0900"
 
     } ,
@@ -17,7 +17,7 @@
       "description" : "",
       "url"      : "/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8-copy",
       "category" : "",
-      "tags"     : "project",
+      "tags"     : "",
       "date"     : "2023-01-01 00:00:00 +0900"
 
     } ,
@@ -28,7 +28,7 @@
       "description" : "",
       "url"      : "/2023/01/01/esg-media-topic-classification",
       "category" : "",
-      "tags"     : "project",
+      "tags"     : "",
       "date"     : "2023-01-01 00:00:00 +0900"
 
     } ,
@@ -39,7 +39,7 @@
       "description" : "",
       "url"      : "/2023/01/01/esg-media-ml-service-kr",
       "category" : "",
-      "tags"     : "project",
+      "tags"     : "22year_kr",
       "date"     : "2023-01-01 00:00:00 +0900"
 
     } ,
@@ -50,7 +50,18 @@
       "description" : "",
       "url"      : "/2023/01/01/colorectal-cancer-h-e-staining-glass-image",
       "category" : "",
-      "tags"     : "Education",
+      "tags"     : "",
+      "date"     : "2023-01-01 00:00:00 +0900"
+
+    } ,
+  
+    {
+
+      "title"    : "ESG Media Topic Classification",
+      "description" : "",
+      "url"      : "/2023/01/01/esg-media-ml-service",
+      "category" : "",
+      "tags"     : "22year",
       "date"     : "2023-01-01 00:00:00 +0900"
 
     } ,
@@ -160,7 +171,7 @@
       "description" : "",
       "url"      : "/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents",
       "category" : "",
-      "tags"     : "publication_patents",
+      "tags"     : "",
       "date"     : "2015-03-01 00:00:00 +0900"
 
     } 

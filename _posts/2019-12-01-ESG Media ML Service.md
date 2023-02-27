@@ -5,10 +5,8 @@ date:   2023-01-01
 tags: [22year]
 ---
 
-[KESG Media Portal Site](http://portal.kresg.co.kr/)
+[KESG Media Portal Site]()
 [Tutorial : Simple ML Pipeline with Kubernetes + Restful API ]()
-
-## 0. Skill & HW
 
 Service Infra
 - Kubernetes : Microk8s ( 1 Master + 2 Worker)
@@ -19,9 +17,9 @@ Service Infra
 - GPU : RTX 3090 x 2 
 
 Model 
-- python , dash
+- python, dash
 - pytorch, transformer, tensorflow
-- BERT (use embedding layer that fine tuned with KLUE dataset) , LightGBM, Mecab, Konlpy, Scikit-learn, 
+- BERT (use embedding layer that fine tuned with KLUE dataset) , LightGBM, Mecab, Konlpy, Scikit-learn,
 
 
 ## 1. Why Kubernetes? 
@@ -32,38 +30,34 @@ Therefore, self-healing-enabled Kubernetes automates these monitoring and repair
 - Despite the resource limitations of single-person development, many useful functions can be easily implemented.
 
 ## 2. Why MicroService Architecture?
-- Service expansion is planned in the future, and it is configured to reuse existing functions by separating them into functional units.
-  
+- Service extension is planned in the future, and it is desgined to reuse existing functions by separating them into functional units.
+
 ## 3. Why Github Action?
-- With Github Action, only docker image and manaifest commit - push on the development server is configured so that the function can be applied directly to the service server.
+- Organized so that functions can be applied directly from the development server to the service server through Github Action with manifest
+ 
+## 4. System Design 
+![kubernetes_pipeline](/assets/esg_media/pipeline/kube_pipeline_trans.png)
 
 
+## 4. Real Service Screen 
+   
+**Front**
+![front](/assets/esg_media/webpage/kresg_front.png)    
+\
 
-1. 시스템 요소 
-- 데이터 수집 -> ML  Pipeline -> 데이터베이스에 결과 저장 과정 
-- 
+**ESG Issue Analysis**
+![issue_analysis](/assets/esg_media/webpage/kresg_issue.png)    
+\
 
+**Target Company Monitoring**
+![monitoring](/assets/esg_media/webpage/kresg_monitoring.png)    
+\
 
+**Target Company News List**
+![news](/assets/esg_media/webpage/kresg_news_list.png)    
+\ 
 
-
-
-
-
-1. Service Platform 
-
-![](../assets/esg_mdedia/webpage/한국ESG연구소.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_이슈종합분석.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_기업모니터링.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_데이터센터.png)
-</br>
-![](../assets/esg_mdedia/webpage/한국ESG연구소_기업뉴스조회.png)
-
-
-
-
-
+**Data Center**
+![data_center](/assets/esg_media/webpage/kresg_datacenter.png)     
 
 

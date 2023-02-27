@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/about</loc>
-<lastmod>2023-02-23T10:48:49+09:00</lastmod>
+<lastmod>2023-02-27T09:25:16+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/search</loc>
-<lastmod>2023-02-23T10:48:49+09:00</lastmod>
+<lastmod>2023-02-27T09:25:16+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents</loc>
@@ -49,6 +49,10 @@
 <lastmod>2022-06-01T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2023/01/01/esg-media-ml-service</loc>
+<lastmod>2023-01-01T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/2023/01/01/colorectal-cancer-h-e-staining-glass-image</loc>
 <lastmod>2023-01-01T00:00:00+09:00</lastmod>
 </url>
@@ -72,16 +76,16 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tag/publication_patents/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/tag/competitions/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tag/Education/</loc>
+<loc>http://localhost:4000/tag/publication_patents/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tag/project/</loc>
+<loc>http://localhost:4000/tag/22year/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/22year_kr/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/paper_cdss/EJC-D-20-02406.pdf</loc>

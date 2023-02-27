@@ -59,7 +59,7 @@ I studied a drug activity prediction model using Non-FDA-approved information to
 ### Gene& Metastasis Feature 
 
 **Sparsity** 
-<br>  
+\
  
 When judging based on the commonly used sparsity judgment criteria, it was determined that there was sparsity by the ratio of zero value.
 - Percentage of zero values: About $Gene Expression  \in \{0,1\}$,  The ratio of zero is at least 85% to a maximum of 95%. Therefore, it is judged to be sparse.
@@ -79,7 +79,7 @@ $$\text{metastasis count} = \sum{ \text{metastasis present}}$$
 $$LNR = log(\frac{Neutrophil}{Lymphocyte} + \epsilon )$$
 
 
-<br>
+\
 
 ## Model Selection
 Below is a comparison table of the eight models of the roc-auc score. It was evaluated with LOOCV (Leave one out CV).

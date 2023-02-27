@@ -4,7 +4,7 @@
  <title>Sidey</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-02-23T10:48:49+09:00</updated>
+ <updated>2023-02-27T09:25:16+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -59,15 +59,55 @@
    <id>http://localhost:4000/2023/01/01/ESG Media Topic Classification</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
 
+&lt;h1 id=&quot;part1--optimize-topic-class-structure-by-ml-model&quot;&gt;Part1 : Optimize topic class structure by ML model&lt;/h1&gt;
+&lt;hr /&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;목적&lt;/li&gt;
-  &lt;li&gt;문제점 리스트 
-2.1 모델 개발&lt;/li&gt;
+  &lt;li&gt;목적
+    &lt;ul&gt;
+      &lt;li&gt;기존에는 사람의 기준에서 뉴스 토픽의 기준을 만들었다.&lt;/li&gt;
+      &lt;li&gt;하지만 피쳐 스페이스에서 정확히 분류되기 힘든 클래스들이 관측되었다.&lt;/li&gt;
+      &lt;li&gt;이러한 클래스를 발견하고 클래스 분류 체계의 개선을 제안&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;베이스 모델&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;22-실제-사용&quot;&gt;2.2 실제 사용&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;먼저, Multiclass-classification 모델을 만들었다.&lt;/li&gt;
+  &lt;li&gt;베이스모델은 TF-IDF 기반으로 만들었다. : (document frequency ignore 기준 Threshold 0.7 ~ 0.99 를 테스트, 대부분의 주요 단어가 누락되지 않는Threhold를 찾았다.)&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;다음은 베이스 모델의 결과&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;class unbalnace 문제가 있었기에, 샘플 수와 정확도는 비례할 것이라고 생각을 하였다. 
+하지만 결과는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;LightGBM 모델을 사용했고, class weight 사용 전후를 비교한 결과는 아래와 같다.&lt;/p&gt;
+
+&lt;p&gt;베이스 모델의 결과 데이터의 클래스는 4가지로 분류가 된다고 보인다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;샘플 수 많음 , 정확도 높음&lt;/li&gt;
+  &lt;li&gt;샘플 수 많음 , 정확도 낮음&lt;/li&gt;
+  &lt;li&gt;샘플 수 적음 , 정확도 높음&lt;/li&gt;
+  &lt;li&gt;샘플 수 적음 , 정확도 낮음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;샘플 수의 많고 적음은 500개를 기준으로 하였다. 
+샘플 수 많은데 정확도가 낮은 클래스를 샘플링 조사를 해보았다.&lt;/p&gt;
+
+&lt;p&gt;데이터 자체에 topic이 여러개 인 경우가 많았다. 즉 사람도 정확히 맞추기 힘든 샘플들 이였다. 
+이는 모델이나 데이터로 해결할 수 없는 문제이기에 클래스 분류 체계를 변경하는 것을 제안했다.&lt;/p&gt;
+
+&lt;p&gt;아래는 클래스의 분류 체계 변경 후 모델 성능이다.&lt;/p&gt;
+
+&lt;p&gt;뉴스 재분류 작업은 많은 리소스 투입이 필요한 일이기에 현재의 훈련 데이터셋으로 서비스 가능 한 레벨의&lt;/p&gt;
+
+&lt;p&gt;모델의 평가는 f-beta (beta = 0.5)로 설정 했다. 뉴스 데이터 특성상 중복 뉴스가 나오는 경우가 많아 recall 보다는 precision이 더욱 많도록&lt;/p&gt;
+
+&lt;h1 id=&quot;part1--optimize-topic-class-structure-by-ml-model-1&quot;&gt;Part1 : Optimize topic class structure by ML model&lt;/h1&gt;
+&lt;hr /&gt;
 
 </content>
  </entry>
@@ -80,53 +120,71 @@
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;
 &lt;a href=&quot;&quot;&gt;Tutorial : Simple ML Pipeline with Kubernetes + Restful API &lt;/a&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Skill &amp;amp; HW
-    &lt;ul&gt;
-      &lt;li&gt;Kubernetes : Microk8s ( 1 Master + 2 Worker)&lt;/li&gt;
-      &lt;li&gt;Github Action&lt;/li&gt;
-      &lt;li&gt;Restful API : Flask&lt;/li&gt;
-      &lt;li&gt;Front : Dash for ProtoType&lt;/li&gt;
-      &lt;li&gt;DataBase : Postgres , mySQL&lt;/li&gt;
-      &lt;li&gt;GPU : RTX 3090 x 2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Why Kubernetes?
-    &lt;ul&gt;
-      &lt;li&gt;샘플이 많은 날 또는 간헐적 네트워크 문제가 발생 시 사람이 매번 모니터링 후 수리를 해야 했다. 
-따라서 Self-Healing이 가능한 쿠버네티스로 이러한 모니터링 및 수리를 자동화 하여서 인건비를 감소시킴.&lt;/li&gt;
-      &lt;li&gt;추후 대규모 트래픽이 발생 할 수 있어서, Load Balance 기능이 필요했다.&lt;/li&gt;
-      &lt;li&gt;grafana 등의 모니터링 기능을 편리하게 세팅 가능.&lt;/li&gt;
-      &lt;li&gt;1인 개발의 리소스 제한에도 불구하고 많은 유용한 기능을 쉽게 구현이 가능하다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Why Github Action?
-    &lt;ul&gt;
-      &lt;li&gt;Github Action으로 개발 서버에서 도커 이미지 및 manaifest commit - push 만으로 서비스 서버에서 바로 기능이 적용 될 수 있도록 구성.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Why Restful-API?
-    &lt;ul&gt;
-      &lt;li&gt;추후 서비스 확장을 계획하고 있고, 기능 단위로 분리하여 기존의 기능을 재사용 할 수 있도록 구성했다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;시스템 요소
-    &lt;ul&gt;
-      &lt;li&gt;시스템 구성도 작성&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;실제 서비스 화면&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Service Infra&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kubernetes : Microk8s ( 1 Master + 2 Worker)&lt;/li&gt;
+  &lt;li&gt;Github Action&lt;/li&gt;
+  &lt;li&gt;MicroService Architecture : Flask + Kubernetes&lt;/li&gt;
+  &lt;li&gt;Front : Dash for ProtoType&lt;/li&gt;
+  &lt;li&gt;DataBase : Postgres , mySQL&lt;/li&gt;
+  &lt;li&gt;GPU : RTX 3090 x 2&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소.png&quot; alt=&quot;&quot; /&gt;
-&amp;lt;/br&amp;gt;
-&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_이슈종합분석.png&quot; alt=&quot;&quot; /&gt;
-&amp;lt;/br&amp;gt;
-&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_기업모니터링.png&quot; alt=&quot;&quot; /&gt;
-&amp;lt;/br&amp;gt;
-&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_데이터센터.png&quot; alt=&quot;&quot; /&gt;
-&amp;lt;/br&amp;gt;
-&lt;img src=&quot;../assets/esg_mdedia/webpage/한국ESG연구소_기업뉴스조회.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Model&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;python, dash&lt;/li&gt;
+  &lt;li&gt;pytorch, transformer, tensorflow&lt;/li&gt;
+  &lt;li&gt;BERT (use embedding layer that fine tuned with KLUE dataset) , LightGBM, Mecab, Konlpy, Scikit-learn,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-why-kubernetes&quot;&gt;1. Why Kubernetes?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;샘플이 많은 날 또는 간헐적 네트워크 문제가 발생 시 사람이 매번 모니터링 후 수리를 해야 했다. 
+따라서 Self-Healing이 가능한 쿠버네티스로 이러한 모니터링 및 수리를 자동화 하여서 인건비를 감소시킴.&lt;/li&gt;
+  &lt;li&gt;추후 대규모 트래픽이 발생 할 수 있어서, Load Balance 기능이 필요했다.&lt;/li&gt;
+  &lt;li&gt;grafana 등의 모니터링 기능을 편리하게 세팅 가능.&lt;/li&gt;
+  &lt;li&gt;1인 개발의 리소스 제한에도 불구하고 많은 유용한 기능을 쉽게 구현이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-why-microservice-architecture&quot;&gt;2. Why MicroService Architecture?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;추후 서비스 확장을 계획하고 있고, 기능 단위로 분리하여 기존의 기능을 재사용 할 수 있도록 구성했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-why-github-action&quot;&gt;3. Why Github Action?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Github Action으로 개발 서버에서 도커 이미지 및 manaifest commit - push 만으로 서비스 서버에서 바로 기능이 적용 될 수 있도록 구성.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-system-design&quot;&gt;4. System Design&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/esg_media/pipeline/kube_pipeline_trans.png&quot; alt=&quot;kubernetes_pipeline&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-real-service-screen&quot;&gt;4. Real Service Screen&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Front&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ESG Issue Analysis&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_issue.png&quot; alt=&quot;issue_analysis&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Target Company Monitoring&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_monitoring.png&quot; alt=&quot;monitoring&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Target Company News List&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_news_list.png&quot; alt=&quot;news&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data Center&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_datacenter.png&quot; alt=&quot;data_center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
 
 </content>
  </entry>
@@ -143,6 +201,94 @@
   &lt;li&gt;H&amp;amp;E staining glass image의 전 처리 및 트레이닝 코드 개발 및 라이브러리화.&lt;/li&gt;
   &lt;li&gt;선행 연구로서 camelyon16,17 데이터로 breast cancer에 대한 모델 만든 후 transfer learning시행.&lt;/li&gt;
 &lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ESG Media Topic Classification</title>
+   <link href="http://localhost:4000/2023/01/01/esg-media-ml-service"/>
+   <updated>2023-01-01T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/01/01/ESG Media ML Service</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;
+&lt;a href=&quot;&quot;&gt;Tutorial : Simple ML Pipeline with Kubernetes + Restful API &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Service Infra&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kubernetes : Microk8s ( 1 Master + 2 Worker)&lt;/li&gt;
+  &lt;li&gt;Github Action&lt;/li&gt;
+  &lt;li&gt;MicroService Architecture : Flask + Kubernetes&lt;/li&gt;
+  &lt;li&gt;Front : Dash for ProtoType&lt;/li&gt;
+  &lt;li&gt;DataBase : Postgres , mySQL&lt;/li&gt;
+  &lt;li&gt;GPU : RTX 3090 x 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Model&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;python, dash&lt;/li&gt;
+  &lt;li&gt;pytorch, transformer, tensorflow&lt;/li&gt;
+  &lt;li&gt;BERT (use embedding layer that fine tuned with KLUE dataset) , LightGBM, Mecab, Konlpy, Scikit-learn,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-why-kubernetes&quot;&gt;1. Why Kubernetes?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;When there were many samples or intermittent network problems, people had to repair them after monitoring each time.
+Therefore, self-healing-enabled Kubernetes automates these monitoring and repairs to reduce labor costs.&lt;/li&gt;
+  &lt;li&gt;Since large-scale traffic could occur in the future, the Load Balance function was required.&lt;/li&gt;
+  &lt;li&gt;Monitoring functions such as grafana can be set conveniently.&lt;/li&gt;
+  &lt;li&gt;Despite the resource limitations of single-person development, many useful functions can be easily implemented.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-why-microservice-architecture&quot;&gt;2. Why MicroService Architecture?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Service extension is planned in the future, and it is desgined to reuse existing functions by separating them into functional units.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-why-github-action&quot;&gt;3. Why Github Action?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Organized so that functions can be applied directly from the development server to the service server through Github Action with manifest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-system-design&quot;&gt;4. System Design&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/esg_media/pipeline/kube_pipeline_trans.png&quot; alt=&quot;kubernetes_pipeline&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-real-service-screen&quot;&gt;4. Real Service Screen&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Front&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ESG Issue Analysis&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_issue.png&quot; alt=&quot;issue_analysis&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Target Company Monitoring&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_monitoring.png&quot; alt=&quot;monitoring&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Target Company News List&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_news_list.png&quot; alt=&quot;news&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data Center&lt;/strong&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_datacenter.png&quot; alt=&quot;data_center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;asdasd
+&lt;br /&gt;
+&lt;br /&gt;
+asdasda
+asd
+asd
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+asdasdasd&lt;/p&gt;
 
 </content>
  </entry>
@@ -856,8 +1002,167 @@ Experimentally tried several feature engineering and applied them because we ach
    <updated>2019-12-01T00:00:00+09:00</updated>
    <id>http://localhost:4000/2019/12/01/Gimhae Fire Prediction Competition</id>
    <content type="html">&lt;p&gt;please go to below link for code and detail explain.
-&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;go to repository&quot; /&gt;&lt;/p&gt;
+Code and data available.
+&lt;a href=&quot;[/assets/2020/01_23/canberra.png](https://github.com/jaewoo-so/gimhae_fire_prediction)&quot;&gt;go to repository&lt;/a&gt;&lt;/p&gt;
 
+&lt;h1 id=&quot;01-eda-and-basic-feature-engineering&quot;&gt;01 EDA and Basic Feature engineering&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/01_EDA_Missing_Value_Basic_Processing.ipynb&quot;&gt;see jupyter notebook : 01 EDA and Basic Feature engineering  &lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Basic feature preprocessing using EDA and domain knowledge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First, you need to check whether the data treated as NaN are missing or sparse.
+Then, the type of data is checked, and pre-processing and feature engineering are performed accordingly.&lt;/p&gt;
+
+&lt;p&gt;Find answers to the questions below here.   &lt;br /&gt;
+A. Missing or Sparse?  &lt;br /&gt;
+B. What type of Missing or Sparse?  &lt;br /&gt;
+C. If values type is missing, is there any meaning of missing?&lt;/p&gt;
+
+&lt;h1 id=&quot;02-experimental-feature-engineering&quot;&gt;02 Experimental Feature engineering&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/01_EDA_Missing_Value_Basic_Processing.ipynb&quot;&gt;see jupyter notebook : 02 Experimental Feature engineering &lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Feature engineering based on Cross Validation score and Test score.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;base-on-cross-validation-score&quot;&gt;Base on Cross Validation Score&lt;/h2&gt;
+&lt;h3 id=&quot;01-convert-missing-value-to-min-value--강수량-prcpttn-&quot;&gt;01 convert missing value to min value : 강수량 prcpttn ()&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In the feature of precipitation, NaN is judged to be unmeasurable because there is no precipitation. change to minimum value 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;02-fill-features-of-categorical-and-binary-type-with-the-most-frequent-values&quot;&gt;02 Fill features of categorical and binary type with the most frequent values&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Due to the time relationship, the imputation model is not trained separately, and is processed as the most frequent value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;03-numeric-type-feature-missing-value-handling&quot;&gt;03 Numeric type feature missing value handling&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Processing based on domain knowledge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;to zero&lt;/strong&gt;
+ttl_grnd_flr : Sum of above-ground floors of buildings    &lt;br /&gt;
+ttl_dwn_fr : Sum of basement floors of buildings&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;fill with mean value&lt;/strong&gt;
+Since the following features have a low null_ratio, better results can be obtained by imputation by creating k-mean or a separate prediction model.  &lt;br /&gt;
+As a matter of time, after imputation as an average, trials of other methods were followed.&lt;/p&gt;
+
+&lt;p&gt;tmprtr : temperature (c)
+wnd_spd : wind speed
+wnd_drctn : wind direction
+hmdt : humidity
+hm_cnt : Administrative district Population
+bldng_ar : Building area
+fr_mn_cnt : Personnel of the fire department in charge&lt;/p&gt;
+
+&lt;h3 id=&quot;04-target-encoding-with-smoothing&quot;&gt;04 Target encoding with smoothing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Experimentation with valid encoding methods
+    &lt;ol&gt;
+      &lt;li&gt;target encoding&lt;/li&gt;
+      &lt;li&gt;target encoding + smoothing&lt;/li&gt;
+      &lt;li&gt;target encoding + noise (0.1)&lt;/li&gt;
+      &lt;li&gt;target encoding + noise (0.4)&lt;/li&gt;
+      &lt;li&gt;target encoding + smoothing + noise (0.1)&lt;/li&gt;
+      &lt;li&gt;target encoding + smoothing + noise (0.4)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;05-electrocity-and-gas-usage&quot;&gt;05 Electrocity and Gas usage&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;When looking at the data distribution, there are samples with no usage.&lt;/li&gt;
+  &lt;li&gt;Assuming that this would be an empty house or an unmanaged building, I created the feature as shown below.&lt;/li&gt;
+  &lt;li&gt;In the case of a building without electricity, it is assumed that the risk of fire will be high due to lack of management.&lt;/li&gt;
+  &lt;li&gt;Fire has nothing to do with usage, so it is expressed in binary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ele_engry_us : Electricity usage for a specific period  &lt;br /&gt;
+gas_engry_us : Gas usage for a specific period&lt;/p&gt;
+
+&lt;p&gt;1 -&amp;gt; A house that is being used or inhabited  &lt;br /&gt;
+0 -&amp;gt; A building that is obsolete.&lt;/p&gt;
+
+&lt;p&gt;In 01_EDA_Missing_Value.ipynb, check that min value = 0 of electricity and gas consumption data.&lt;/p&gt;
+
+&lt;h3 id=&quot;fr_mn_cnt-number-of-fire-department-personnel&quot;&gt;fr_mn_cnt: Number of fire department personnel&lt;/h3&gt;
+
+&lt;p&gt;The number of fire department personnel in the jurisdiction is limited to a set  &lt;br /&gt;
+Assume that fire department personnel are assigned according to the size of the area and the frequency of fire occurrence.  &lt;br /&gt;
+Set Binary to 1 if more than 100, 0 if less than 100&lt;/p&gt;
+
+&lt;h2 id=&quot;based-on-test-score&quot;&gt;Based on test score&lt;/h2&gt;
+
+&lt;h3 id=&quot;multiple-encoding-tests&quot;&gt;Multiple encoding tests&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_exp/sojaewoo/data_1111_version/code_v07/001_1_encoding_evaluation_lgb.ipynb&quot;&gt;see jupyter notebook : experiment result Lightgbm&lt;/a&gt;  &lt;br /&gt;
+&lt;a href=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_exp/sojaewoo/data_1111_version/code_v07/001_1_encoding_evaluation_xgb.ipynb&quot;&gt;see jupyter notebook : experiment result Xgboost&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wnd_drctn-008-score-up&quot;&gt;wnd_drctn (0.08 score up)&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/resource_data/wind.png&quot; /&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assuming that the wind direction is different for each season, there is a possibility of fire depending on the direction of the season&lt;/li&gt;
+  &lt;li&gt;Data categorization into 4 types according to wind direction&lt;/li&gt;
+  &lt;li&gt;Apply binning to wind direction (wnd_drctn)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bin_hour--created-feature-003-score-up&quot;&gt;bin_hour : created feature (0.03 score up)&lt;/h2&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/resource_data/fire.png&quot; /&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assume that it will be difficult to report a fire at dawn.&lt;/li&gt;
+  &lt;li&gt;As a result of the check, according to the statistics of Seoul, there is a difference in the occurrence of fires according to time zones.&lt;/li&gt;
+  &lt;li&gt;Similarly, Gimhae Fire &amp;amp; Marine Insurance determined that there was a difference in the frequency of fire occurrence by time period, and categorized data by time period.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;03-data-distribution-control&quot;&gt;03 Data distribution control&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check the distribution of Train / Validation / Test data. Control the distribution similarly to the actual test data to be used.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is unusual about this competition is that validation data was given. Therefore, it was assumed that at least the validation data would have a similar distribution to the test data, but the difference and correlation between the CV score and the LB score could not be derived, so the work was performed assuming that the distribution would be different.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adverserial validation 및 UMAP dimension reduction visualization 으로 확인
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/etc_experiment/adverserial_validation/#01_adverserial_test_v11.ipynb&quot;&gt;see jupyter notebook : Adverserial Validation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/etc_experiment/umap_dimentional_reduction/01_datav04_Apply_umap_test.ipynb&quot;&gt;see jupyter notebook : UMAP dimension reduction visualization&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;04-sampling&quot;&gt;04 Sampling&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;The following sampling strategies were used to control for differences in data distribution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-a-dimensionally-reduced-low-dimensional-vector-that-samples-only-samples-that-are-close-to-the-test-sample&quot;&gt;1. A dimensionally reduced, low-dimensional vector that samples only samples that are close to the test sample.&lt;/h2&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/resource_data/euclidian.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;euclidean distance&lt;/p&gt;
+
+&lt;p&gt;The black dot is the test data. Model training proceeds by removing samples that are far from the black point distance and sampling only samples that are close to the black point.
+The criterion of closeness was experimentally determined.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-picking-with-predicted-probabilities&quot;&gt;2. Picking with Predicted Probabilities&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a train or not, validation or not, test or not classification model and extract train and validation samples that are indistinguishable from test.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://github.com/jaewoo-so/gimhae_fire_prediction/blob/master/code_final/resource_data/te.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;Probability distribution of predicted values for test data or not.  &lt;br /&gt;
+Even though it is test data, there are also samples that are not test data. At this time, select training and validation samples that are predicted with a similar probability to the test data. (mainly between 0.05 and 0.15)  &lt;br /&gt;
+Conversely, samples predicted as test data are also selected even though they are not test data. (mainly between 0.8 and 1.0)&lt;/p&gt;
 </content>
  </entry>
  

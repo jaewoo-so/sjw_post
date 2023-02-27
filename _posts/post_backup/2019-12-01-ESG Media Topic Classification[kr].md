@@ -64,5 +64,10 @@ LightGBM 모델을 사용했고, class weight 사용 전후를 비교한 결과�
 
 
 
+#
+
+
+
+
 
 
