@@ -12,11 +12,23 @@ date:   2023-01-01
  
 
 1. 목적 
+   
 - 기존에는 사람의 기준에서 뉴스 토픽의 기준을 만들었다. 
 - 하지만 피쳐 스페이스에서 정확히 분류되기 힘든 클래스들이 관측되었다. 
 - 이러한 클래스를 발견하고 클래스 분류 체계의 개선을 제안
 
-2. 베이스 모델 
+2. 긍정/부정 모델 
+
+긍부정 분류 모델의 경우 TF-IDF 기반의 피쳐, BERT 임베딩 벡터를 + Auto Encoder로 압축한 2000 차원의 피쳐를 Tree 계열 모델(Random Forest, LightGBM)에 실험했다. BERT기반의 성능이 더 좋았고, 결과는 아래와 같다. 
+
+![pn_table](/assets/esg_media/topic/pn_model_confusion.png)
+![pn_auc](/assets/esg_media/topic/pn_auc.png)
+
+
+
+
+
+3. 베이스 모델 
 
 - 먼저, Multiclass-classification 모델을 만들었다. 
 - 베이스모델은 TF-IDF 기반으로 만들었다. : (document frequency ignore 기준 Threshold 0.7 ~ 0.99 를 테스트, 대부분의 주요 단어가 누락되지 않는Threhold를 찾았다.) 
@@ -71,3 +83,7 @@ LightGBM 모델을 사용했고, class weight 사용 전후를 비교한 결과�
 
 
 
+
+
+
+  
