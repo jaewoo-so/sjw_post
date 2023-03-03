@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Sidey</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2023-02-27T09:25:16+09:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://0.0.0.0:4001/atom.xml" rel="self"/>
+ <link href="http://0.0.0.0:4001/"/>
+ <updated>2023-03-03T17:24:50+09:00</updated>
+ <id>http://0.0.0.0:4001</id>
  <author>
    <name></name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>ESG Media Topic Classification</title>
-   <link href="http://localhost:4000/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8"/>
+   <link href="http://0.0.0.0:4001/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/01/01/pro - 복사본</id>
+   <id>http://0.0.0.0:4001/2023/01/01/pro - 복사본</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -34,9 +34,9 @@
  
  <entry>
    <title>ESG Media Topic Classification</title>
-   <link href="http://localhost:4000/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8-copy"/>
+   <link href="http://0.0.0.0:4001/2023/01/01/pro-%EB%B3%B5%EC%82%AC%EB%B3%B8-copy"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/01/01/pro - 복사본 copy</id>
+   <id>http://0.0.0.0:4001/2023/01/01/pro - 복사본 copy</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -54,22 +54,34 @@
  
  <entry>
    <title>ESG Media Topic Classification</title>
-   <link href="http://localhost:4000/2023/01/01/esg-media-topic-classification"/>
+   <link href="http://0.0.0.0:4001/2023/01/01/esg-media-topic-classification-kr"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/01/01/ESG Media Topic Classification</id>
+   <id>http://0.0.0.0:4001/2023/01/01/ESG Media Topic Classification[kr]</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;part1--optimize-topic-class-structure-by-ml-model&quot;&gt;Part1 : Optimize topic class structure by ML model&lt;/h1&gt;
 &lt;hr /&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;목적
-    &lt;ul&gt;
-      &lt;li&gt;기존에는 사람의 기준에서 뉴스 토픽의 기준을 만들었다.&lt;/li&gt;
-      &lt;li&gt;하지만 피쳐 스페이스에서 정확히 분류되기 힘든 클래스들이 관측되었다.&lt;/li&gt;
-      &lt;li&gt;이러한 클래스를 발견하고 클래스 분류 체계의 개선을 제안&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;목적&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기존에는 사람의 기준에서 뉴스 토픽의 기준을 만들었다.&lt;/li&gt;
+  &lt;li&gt;하지만 피쳐 스페이스에서 정확히 분류되기 힘든 클래스들이 관측되었다.&lt;/li&gt;
+  &lt;li&gt;이러한 클래스를 발견하고 클래스 분류 체계의 개선을 제안&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;긍정/부정 모델&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;긍부정 분류 모델의 경우 TF-IDF 기반의 피쳐, BERT 임베딩 벡터를 + Auto Encoder로 압축한 2000 차원의 피쳐를 Tree 계열 모델(Random Forest, LightGBM)에 실험했다. BERT기반의 성능이 더 좋았고, 결과는 아래와 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/esg_media/topic/pn_model_confusion.png&quot; alt=&quot;pn_table&quot; /&gt;
+&lt;img src=&quot;/assets/esg_media/topic/pn_auc.png&quot; alt=&quot;pn_auc&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
   &lt;li&gt;베이스 모델&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -109,14 +121,16 @@
 &lt;h1 id=&quot;part1--optimize-topic-class-structure-by-ml-model-1&quot;&gt;Part1 : Optimize topic class structure by ML model&lt;/h1&gt;
 &lt;hr /&gt;
 
+&lt;p&gt;#&lt;/p&gt;
+
 </content>
  </entry>
  
  <entry>
    <title>ESG Media Topic Classification</title>
-   <link href="http://localhost:4000/2023/01/01/esg-media-ml-service-kr"/>
+   <link href="http://0.0.0.0:4001/2023/01/01/esg-media-ml-service-kr"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/01/01/ESG Media ML Service[kr]</id>
+   <id>http://0.0.0.0:4001/2023/01/01/ESG Media ML Service[kr]</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;
 &lt;a href=&quot;&quot;&gt;Tutorial : Simple ML Pipeline with Kubernetes + Restful API &lt;/a&gt;&lt;/p&gt;
 
@@ -162,38 +176,32 @@
 &lt;h2 id=&quot;4-real-service-screen&quot;&gt;4. Real Service Screen&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Front&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_front.png&quot; alt=&quot;front&quot; /&gt;  &lt;br /&gt;
+\&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ESG Issue Analysis&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_issue.png&quot; alt=&quot;issue_analysis&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_issue.png&quot; alt=&quot;issue_analysis&quot; /&gt;  &lt;br /&gt;
+\&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Target Company Monitoring&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_monitoring.png&quot; alt=&quot;monitoring&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_monitoring.png&quot; alt=&quot;monitoring&quot; /&gt;  &lt;br /&gt;
+\&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Target Company News List&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_news_list.png&quot; alt=&quot;news&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_news_list.png&quot; alt=&quot;news&quot; /&gt;  &lt;br /&gt;
+\&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Data Center&lt;/strong&gt;
 &lt;img src=&quot;/assets/esg_media/webpage/kresg_datacenter.png&quot; alt=&quot;data_center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
 
 </content>
  </entry>
  
  <entry>
    <title>ESG Media Topic Classification</title>
-   <link href="http://localhost:4000/2023/01/01/colorectal-cancer-h-e-staining-glass-image"/>
+   <link href="http://0.0.0.0:4001/2023/01/01/colorectal-cancer-h-e-staining-glass-image"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/01/01/Colorectal cancer H&E staining glass image </id>
+   <id>http://0.0.0.0:4001/2023/01/01/Colorectal cancer H&E staining glass image </id>
    <content type="html">&lt;p&gt;[2018.11-2019.03] Colorectal cancer H&amp;amp;E staining glass image 이미지를 이용한 용종 분류&lt;/p&gt;
 
 &lt;ul&gt;
@@ -206,25 +214,26 @@
  </entry>
  
  <entry>
-   <title>ESG Media Topic Classification</title>
-   <link href="http://localhost:4000/2023/01/01/esg-media-ml-service"/>
+   <title>ESG Media Machine-Learning Service Pipeline</title>
+   <link href="http://0.0.0.0:4001/2023/01/01/esg-media-ml-service"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/01/01/ESG Media ML Service</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;KESG Media Portal Site&lt;/a&gt;
-&lt;a href=&quot;&quot;&gt;Tutorial : Simple ML Pipeline with Kubernetes + Restful API &lt;/a&gt;&lt;/p&gt;
+   <id>http://0.0.0.0:4001/2023/01/01/ESG Media ML Service</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://portal.kresg.co.kr/&quot;&gt;KESG Media Portal Site &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Tutorial : Simple ML Pipeline with Kubernetes + Restful API &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Service Infra&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Service Infra&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Kubernetes : Microk8s ( 1 Master + 2 Worker)&lt;/li&gt;
   &lt;li&gt;Github Action&lt;/li&gt;
   &lt;li&gt;MicroService Architecture : Flask + Kubernetes&lt;/li&gt;
   &lt;li&gt;Front : Dash for ProtoType&lt;/li&gt;
   &lt;li&gt;DataBase : Postgres , mySQL&lt;/li&gt;
-  &lt;li&gt;GPU : RTX 3090 x 2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Model&lt;/p&gt;
-&lt;ul&gt;
+  &lt;li&gt;GPU : RTX 3090 x 2  &lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Model&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;python, dash&lt;/li&gt;
   &lt;li&gt;pytorch, transformer, tensorflow&lt;/li&gt;
   &lt;li&gt;BERT (use embedding layer that fine tuned with KLUE dataset) , LightGBM, Mecab, Konlpy, Scikit-learn,&lt;/li&gt;
@@ -254,50 +263,29 @@ Therefore, self-healing-enabled Kubernetes automates these monitoring and repair
 
 &lt;h2 id=&quot;4-real-service-screen&quot;&gt;4. Real Service Screen&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Front&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ESG Issue Analysis&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_issue.png&quot; alt=&quot;issue_analysis&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Target Company Monitoring&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_monitoring.png&quot; alt=&quot;monitoring&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Target Company News List&lt;/strong&gt;
-&lt;img src=&quot;/assets/esg_media/webpage/kresg_news_list.png&quot; alt=&quot;news&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Data Center&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Front&lt;/strong&gt;  &lt;br /&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_front.png&quot; alt=&quot;front&quot; /&gt;  &lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;ESG Issue Analysis&lt;/strong&gt;  &lt;br /&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_issue.png&quot; alt=&quot;issue_analysis&quot; /&gt;  &lt;br /&gt;
+\  &lt;br /&gt;
+&lt;strong&gt;Target Company Monitoring&lt;/strong&gt;  &lt;br /&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_monitoring.png&quot; alt=&quot;monitoring&quot; /&gt;  &lt;br /&gt;
+\  &lt;br /&gt;
+&lt;strong&gt;Target Company News List&lt;/strong&gt;  &lt;br /&gt;
+&lt;img src=&quot;/assets/esg_media/webpage/kresg_news_list.png&quot; alt=&quot;news&quot; /&gt;     &lt;br /&gt;
+\  &lt;br /&gt;
+&lt;strong&gt;Data Center&lt;/strong&gt;  &lt;br /&gt;
 &lt;img src=&quot;/assets/esg_media/webpage/kresg_datacenter.png&quot; alt=&quot;data_center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;/br&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;asdasd
-&lt;br /&gt;
-&lt;br /&gt;
-asdasda
-asd
-asd
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-asdasdasd&lt;/p&gt;
 
 </content>
  </entry>
  
  <entry>
    <title>Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy</title>
-   <link href="http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy-kr"/>
+   <link href="http://0.0.0.0:4001/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy-kr"/>
    <updated>2022-06-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2022/06/01/Clinical decision support algorithm to anti–pd-1 therapy[kr]</id>
+   <id>http://0.0.0.0:4001/2022/06/01/Clinical decision support algorithm to anti–pd-1 therapy[kr]</id>
    <content type="html">&lt;h2 id=&quot;a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program&quot;&gt;A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program&lt;/h2&gt;
 &lt;h3 id=&quot;1020200076756--filed-jun-23-2020&quot;&gt;1020200076756 · Filed Jun 23, 2020&lt;/h3&gt;
 
@@ -422,9 +410,9 @@ linear는 한변수가 1증가시 다른변수도 같은양인 1로 증가하는
  
  <entry>
    <title>Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy</title>
-   <link href="http://localhost:4000/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy"/>
+   <link href="http://0.0.0.0:4001/2022/06/01/clinical-decision-support-algorithm-to-anti-pd-1-therapy"/>
    <updated>2022-06-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2022/06/01/Clinical decision support algorithm to anti–pd-1 therapy</id>
+   <id>http://0.0.0.0:4001/2022/06/01/Clinical decision support algorithm to anti–pd-1 therapy</id>
    <content type="html">&lt;h2 id=&quot;a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program&quot;&gt;A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program&lt;/h2&gt;
 &lt;h3 id=&quot;1020200076756--filed-jun-23-2020&quot;&gt;1020200076756 · Filed Jun 23, 2020&lt;/h3&gt;
 
@@ -485,7 +473,7 @@ Each monthly treatment costs about $600,000 and $800,000, respectively, and cost
 &lt;h3 id=&quot;gene-metastasis-feature&quot;&gt;Gene&amp;amp; Metastasis Feature&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Sparsity&lt;/strong&gt; 
-&lt;br /&gt;&lt;/p&gt;
+\&lt;/p&gt;
 
 &lt;p&gt;When judging based on the commonly used sparsity judgment criteria, it was determined that there was sparsity by the ratio of zero value.&lt;/p&gt;
 &lt;ul&gt;
@@ -507,7 +495,7 @@ Each monthly treatment costs about $600,000 and $800,000, respectively, and cost
 \(LNR = log(\frac{Neutrophil}{Lymphocyte} + \epsilon )\)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;\&lt;/p&gt;
 
 &lt;h2 id=&quot;model-selection&quot;&gt;Model Selection&lt;/h2&gt;
 &lt;p&gt;Below is a comparison table of the eight models of the roc-auc score. It was evaluated with LOOCV (Leave one out CV).
@@ -538,9 +526,9 @@ correlation = -0.44 and p-value = 8.1e-11. That is, it was not a strong relation
  
  <entry>
    <title>A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</title>
-   <link href="http://localhost:4000/2020/06/23/a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program"/>
+   <link href="http://0.0.0.0:4001/2020/06/23/a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program"/>
    <updated>2020-06-23T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/06/23/A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</id>
+   <id>http://0.0.0.0:4001/2020/06/23/A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program</id>
    <content type="html">&lt;p&gt;1020200076756 · Filed Jun 23, 2020&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;'./assets/../../../assets/publication_patents/patent_pdl1/patent_pdl1_front.png'&quot;&gt;Front&lt;/a&gt;&lt;/p&gt;
@@ -586,9 +574,9 @@ correlation = -0.44 and p-value = 8.1e-11. That is, it was not a strong relation
  
  <entry>
    <title>CTD-squared Pancancer Chemosensitivity DREAM Challenge</title>
-   <link href="http://localhost:4000/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
+   <link href="http://0.0.0.0:4001/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
    <updated>2020-06-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/06/01/CTD-squared Pancancer Chemosensitivity DREAM Challenge</id>
+   <id>http://0.0.0.0:4001/2020/06/01/CTD-squared Pancancer Chemosensitivity DREAM Challenge</id>
    <content type="html">&lt;h1 id=&quot;gene-expression-searching-and-machine-learning-model-for-chemosensitivity-prediction&quot;&gt;Gene Expression Searching and machine learning model for Chemosensitivity Prediction&lt;/h1&gt;
 &lt;hr /&gt;
 
@@ -769,9 +757,9 @@ Experimentally tried several feature engineering and applied them because we ach
  
  <entry>
    <title>CTD-squared Pancancer Chemosensitivity DREAM Challenge</title>
-   <link href="http://localhost:4000/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
+   <link href="http://0.0.0.0:4001/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
    <updated>2020-06-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/06/01/CTD-squared Pancancer Chemosensitivity DREAM Challenge</id>
+   <id>http://0.0.0.0:4001/2020/06/01/CTD-squared Pancancer Chemosensitivity DREAM Challenge</id>
    <content type="html">&lt;h1 id=&quot;gene-expression-searching-and-machine-learning-model-for-chemosensitivity-prediction&quot;&gt;Gene Expression Searching and machine learning model for Chemosensitivity Prediction&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;contents&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -944,18 +932,18 @@ Experimentally tried several feature engineering and applied them because we ach
  
  <entry>
    <title>CTD-squared Pancancer Drug Activity DREAM Challenge</title>
-   <link href="http://localhost:4000/2020/04/01/ctd-squared-pancancer-drug-activity-dream-challenge"/>
+   <link href="http://0.0.0.0:4001/2020/04/01/ctd-squared-pancancer-drug-activity-dream-challenge"/>
    <updated>2020-04-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2020/04/01/CTD-squared Pancancer Drug Activity DREAM Challenge</id>
+   <id>http://0.0.0.0:4001/2020/04/01/CTD-squared Pancancer Drug Activity DREAM Challenge</id>
    <content type="html">
 </content>
  </entry>
  
  <entry>
    <title>Methods for providing information about responses to cancer immunotherapy and devices using the same</title>
-   <link href="http://localhost:4000/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same-kr"/>
+   <link href="http://0.0.0.0:4001/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same-kr"/>
    <updated>2019-12-24T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same[kr]</id>
+   <id>http://0.0.0.0:4001/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same[kr]</id>
    <content type="html">&lt;h2 id=&quot;info&quot;&gt;Info&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;10-2021-0081547&lt;/li&gt;
@@ -967,29 +955,29 @@ Experimentally tried several feature engineering and applied them because we ach
 &lt;p&gt;&lt;a href=&quot;'../../../__posts/2022-6-01-Clinical%20decision%20support%20algorithm%20to%20anti%E2%80%93pd-1%20therapy.md'&quot;&gt;post&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://www.ejcancer.com/article/S0959-8049(21)00328-2/fulltext#%20&quot;&gt;paper&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;/br&amp;gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;img src=&quot;'../../../assets/publication_patents/patent_pdl1/patent_pdl1_front.png'&quot; alt=&quot;front&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>Methods for providing information about responses to cancer immunotherapy and devices using the same</title>
-   <link href="http://localhost:4000/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same"/>
+   <link href="http://0.0.0.0:4001/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same"/>
    <updated>2019-12-24T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same</id>
+   <id>http://0.0.0.0:4001/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same</id>
    <content type="html">&lt;h2 id=&quot;info&quot;&gt;Info&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;10-2021-0081547&lt;/li&gt;
   &lt;li&gt;Filed Dec 24, 2019&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;\&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Please refer to the following link&lt;/em&gt;&lt;/strong&gt;
 &lt;a href=&quot;/__posts/2022-6-01-Clinical decision support algorithm to anti–pd-1 therapy.md&quot;&gt;Post&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://www.ejcancer.com/article/S0959-8049(21)00328-2/fulltext#%20&quot;&gt;Paper&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;\&lt;/p&gt;
 
 &lt;h3 id=&quot;patent-cover&quot;&gt;Patent Cover&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/patent_pd/patent_pdl1_front.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
@@ -998,9 +986,9 @@ Experimentally tried several feature engineering and applied them because we ach
  
  <entry>
    <title>Gimhae Fire Prediction Competition</title>
-   <link href="http://localhost:4000/2019/12/01/gimhae-fire-prediction-competition"/>
+   <link href="http://0.0.0.0:4001/2019/12/01/gimhae-fire-prediction-competition"/>
    <updated>2019-12-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2019/12/01/Gimhae Fire Prediction Competition</id>
+   <id>http://0.0.0.0:4001/2019/12/01/Gimhae Fire Prediction Competition</id>
    <content type="html">&lt;p&gt;please go to below link for code and detail explain.
 Code and data available.
 &lt;a href=&quot;[/assets/2020/01_23/canberra.png](https://github.com/jaewoo-so/gimhae_fire_prediction)&quot;&gt;go to repository&lt;/a&gt;&lt;/p&gt;
@@ -1168,9 +1156,9 @@ Conversely, samples predicted as test data are also selected even though they ar
  
  <entry>
    <title>Swarm Reinforcement Learning Algorithm with Characterized Agents</title>
-   <link href="http://localhost:4000/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents"/>
+   <link href="http://0.0.0.0:4001/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents"/>
    <updated>2015-03-01T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2015/03/01/Swarm Reinforcement Learning Algorithm with Characterized Agents</id>
+   <id>http://0.0.0.0:4001/2015/03/01/Swarm Reinforcement Learning Algorithm with Characterized Agents</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
 
 </content>

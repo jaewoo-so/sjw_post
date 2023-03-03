@@ -13,7 +13,9 @@ author:
   email: #youremail
   url: #yoururl
 permalink: pretty
-
+# deployment
+host: 0.0.0.0
+port: 4001
 baseurl: ""
 
 highlighter: none

@@ -5,7 +5,8 @@ date:   2023-01-01
 #tags: [project]
 ---
 
-[KESG Media Portal Site]()
+**Model is applied in below site for classification esg news issue and target company**
+- [KESG Media Portal Site](http://portal.kresg.co.kr/)
 
 # Part1 : Optimize topic class structure by ML model 
 ---

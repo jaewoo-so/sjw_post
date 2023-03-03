@@ -96,16 +96,18 @@ finaly, define of ensemble score is like below .
 
 $$ S_{ensemble} = exp( \frac{1}{|\mathcal{M}_{candidate}|}  \sum_{m \in \mathcal{M}_{candidate}} log( \mathcal{D}_{avg}(m)) ) $$
 
-&nbsp;
-&nbsp;
+<br>
+<br>
+
 # 3. Conclusion & Discussion
 We started from the assumption that we could deduce the MoA of the drug via post-treatment gene expression on the drug.
 It is difficult to predict drug sensitivities that have specific targets and specific pathways(Koras, K et al. 2020). So, we recognized the need to make models for each drug, and we tried many things, such as looking at which gene has high coefficient for each drug by predicting AUC with only gene expression, in addition to the methods described above. Our experiments have also shown that it is better to make a model for each drugs than to use one model predicting the AUC for all drugs.
 Each cell line has its own unique characteristics, so it is very meaningful to use it as a feature that can explain it. Predicting the drug sensitivities for each cell line will be very useful in selecting cell lines in experimental screening and also valuable in the field of new drug development in reducing costs.
 Since we didn't have enough time to find the optimal model, we had no choice but to use the naive experimental results, so I think we can improve the predictive performance through more accurate experiments.
 
-&nbsp;
-&nbsp;
+<br>
+<br>
+
 # 4. References
 1. CTD-squared Pancancer Chemosensitivity DREAM Challenge (syn21763589)     
 2. CTD-squared BeatAML DREAM Challenge (syn20940518)        
@@ -117,8 +119,9 @@ Since we didn't have enough time to find the optimal model, we had no choice but
 8. Schubert M, Klinger B, Klünemann M, Sieber A, Uhlitz F, Sauer S, Garnett MJ, Blüthgen N, Saez-Rodriguez J. “Perturbation-response genes reveal signaling footprints in cancer gene expression.” Nature Communications: 10.1038/s41467-017-02391-6        
 
 
-&nbsp;
-&nbsp;
+<br>
+<br>
+
 # 5. Feature Engineering
 
 **1. Data Integration**     
@@ -136,29 +139,32 @@ Different public datasets have different gene types. Alternatively, you can use 
     <img width="600" src="./img/vae_ae.png" alt="Material Bread logo">
 </p>
 
-&nbsp;
+<br>
 
 **Why perform demesional reduction and use cosine similarity for AE?**    
 -> I found that the genomic data we use is biased by sequencing machines and processes in training machine learning models. This was previously based on cancer tumor classification tests and genomic data.    
-&nbsp;
+<br>
 These differences mainly occur in relative expression amounts, and it was experimentally found that the types of genes expressed are generally consistent.    
-&nbsp;
+<br>
 This is why I used AE and cosine similarity as an evaluation metric.
 
 
-&nbsp;       
+<br>
+
 **Why not UMAP(Uniform Manifold Approximation and Projection)?**  
  -> In the case of UMAP, it is necessary to design a quality evaluation method of the pre-distance metric, search for the optimal metric, and optimize the projection parameters. And since the model description is not necessary for this competition, it was not used for the sake of time.       
       
      
-&nbsp;    
+<br>  
+
 **Why not linear dimensionality reduction (like PCA, NMF)?**    
  -> Because the data is high-dimensional and sparse, the linear method does not fit.
 
-&nbsp;    
+<br>   
+
 **3. DNN encoder feature**      
 -> It is a method determined in the engineering process to create optimal features.    
-&nbsp;
+<br>
 Experimentally tried several feature engineering and applied them because we achieved the best CV-score.
 
 

@@ -1,22 +1,24 @@
 ---
 layout: post
-title:  "ESG Media Topic Classification"
+title:  "ESG Media Machine-Learning Service Pipeline"
 date:   2023-01-01
 tags: [22year]
 ---
 
-[KESG Media Portal Site]()
-[Tutorial : Simple ML Pipeline with Kubernetes + Restful API ]()
+**Link**    
+- [KESG Media Portal Site ](http://portal.kresg.co.kr/)       
+- [Tutorial : Simple ML Pipeline with Kubernetes + Restful API ]()    
 
-Service Infra
+
+**Service Infra**    
 - Kubernetes : Microk8s ( 1 Master + 2 Worker)
 - Github Action 
 - MicroService Architecture : Flask + Kubernetes
 - Front : Dash for ProtoType
 - DataBase : Postgres , mySQL
-- GPU : RTX 3090 x 2 
-
-Model 
+- GPU : RTX 3090 x 2    
+\
+**Model**    
 - python, dash
 - pytorch, transformer, tensorflow
 - BERT (use embedding layer that fine tuned with KLUE dataset) , LightGBM, Mecab, Konlpy, Scikit-learn,
@@ -41,23 +43,19 @@ Therefore, self-healing-enabled Kubernetes automates these monitoring and repair
 
 ## 4. Real Service Screen 
    
-**Front**
+**Front**    
 ![front](/assets/esg_media/webpage/kresg_front.png)    
-\
-
-**ESG Issue Analysis**
+<br>
+**ESG Issue Analysis**    
 ![issue_analysis](/assets/esg_media/webpage/kresg_issue.png)    
-\
-
-**Target Company Monitoring**
+<br>   
+**Target Company Monitoring**    
 ![monitoring](/assets/esg_media/webpage/kresg_monitoring.png)    
-\
-
-**Target Company News List**
-![news](/assets/esg_media/webpage/kresg_news_list.png)    
-\ 
-
-**Data Center**
-![data_center](/assets/esg_media/webpage/kresg_datacenter.png)     
+<br>    
+**Target Company News List**    
+![news](/assets/esg_media/webpage/kresg_news_list.png)       
+<br>   
+**Data Center**    
+![data_center](/assets/esg_media/webpage/kresg_datacenter.png)       
 
 

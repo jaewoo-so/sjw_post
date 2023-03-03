@@ -5,7 +5,7 @@ date:   2023-01-01
 tags: [22year_kr]
 ---
 
-[KESG Media Portal Site]()
+[KESG Media Portal Site](http://portal.kresg.co.kr/)
 [Tutorial : Simple ML Pipeline with Kubernetes + Restful API ]()
 
 Service Infra
