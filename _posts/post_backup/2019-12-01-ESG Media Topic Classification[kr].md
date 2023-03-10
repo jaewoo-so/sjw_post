@@ -70,6 +70,10 @@ date:   2023-01-01
 
 <br>
 
+### Prediction Result Pattern 
+
+<br>
+
 베이스 모델의 결과 데이터의 클래스는 4가지로 특성이 관측되었다. 
 
 - 샘플 수 많음 , 정확도 높음
@@ -89,7 +93,7 @@ date:   2023-01-01
 ## 4. Ensemble Model 
 ---
 
-### Class Imablance Measure
+### 4.1 Class Imablance Measure
  multi-majority multi-minority 확인을 위해서 imbalnace ratio, Imbalance-degree을 살펴보았다. 
  모델의 훈련 데이터 세트를 imbalnace의 정도에 따라서 컨트롤한다. 
 
@@ -100,12 +104,13 @@ imbalance degree 측정을 위해 훈련 데이터의 class 비율을 class dist
 <br>
 
 ### Data info
-
 - k = 28 (num of class)    
 - total sample size = about 100000
 
+<br>
+
 **Class imbalance degree**
-|include etc class|exclude etc class|
+|include 'etc' class | exclude 'etc' class|
 |---|---|
 |22.64|18.36|
 
@@ -114,21 +119,35 @@ imbalance degree 측정을 위해 훈련 데이터의 class 비율을 class dist
 
 $$\eta_{k} \text{ is multi-minority} \iff \sum^{K} \mathbb{1}\left(\eta_{i} < \frac{1}{K} \right) > \frac{K}{2}$$
 
-imbalance 문제를 다루기 위한 방법은 아래와 같고, 이중 Cost-sensitive Learning, Ensemble Methods를 사용하였다. 
- 먼저 베이스모델의 결과를 보고, 다음으로 Cost-sensitive Learning, Ensemble Methods를 적용한 모델을 분석해본다. 
 
+### 4.2 Deal with imbalnce 
 
+<br>
 
+imbalance 문제를 다루기 위한 방법 중 Cost-sensitive Learning, Ensemble Methods를 사용하였다. Sampling 및 data Augmentation 기법을 사용하지 않은 이유는 다음과 같다.  
 
-Sampling 및 data Augmentation은 아래의 이류로 사용하지 않은 이유이다. 
+<br>
 
+**Why not use "Sampling" and "Data Augmentation" for ?**
 - Oversampling, Undersampling : majority class에서는 심한 노이즈 또는 레이블링 오차등의 퀄리티 이슈가 보이는 클래스, minority class에서는 feature space 상 cluster preservation이 잘 되어있는 것으로 보이는 클래스 들이 존재한다. 따라서 샘플링 방식이 모든 클래스에 동등한 효과를 보이기를 기대하기 어렵다. 
 - Data Augmentation : 
   - ESG관련 내용에 대한 semantic meaning 연구가 없다. 
-  - GPT-3나 BERT같은 언어모델로 생성하는 방법이 있으나, ESG라는 주제에 대해서는 품질 보증이 특히나 어렵다. 
+  - GPT-3나 BERT같은 언어모델로 생성하는 방법이 있으나, ESG관련 부정적 기업의 이슈는 사실에 기반한 사건이므로 생성된 데이터의 오류가 클 가능성이 있다. 추가로 시간에 따른 concept shift가 관찰되기 때문에 오버피팅의 가능성이 크다.  
 
 
 ---
+### 4.2 Ensemble : Model split 
+
+multi-minority
+
+
+
+## 5. Catergory modify
+
+- 각 클래스의 샘플의 오분류에서 편향이 발생하는지 확인을 하였다. 
+- 
+
+
 
 
 
