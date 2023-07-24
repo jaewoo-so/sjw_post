@@ -2,11 +2,11 @@
 layout: post
 title:  "ESG Media Machine-Learning Service Pipeline"
 date:   2023-01-01
-tags: [22year]
+tags: [year22]
 ---
 
 **Link**    
-- [KESG Media Portal Site ](http://portal.kresg.co.kr/)       
+- <a href="http://portal.kresg.co.kr" style="color: blue; text-decoration: underline;">KESG Media Portal Site</a>
 - [Tutorial : Simple ML Pipeline with Kubernetes + Restful API ]()    
 
 
@@ -17,7 +17,7 @@ tags: [22year]
 - Front : Dash for ProtoType
 - DataBase : Postgres , mySQL
 - GPU : RTX 3090 x 2    
-\
+
 **Model**    
 - python, dash
 - pytorch, transformer, tensorflow
@@ -41,7 +41,7 @@ Therefore, self-healing-enabled Kubernetes automates these monitoring and repair
 ![kubernetes_pipeline](/assets/esg_media/pipeline/kube_pipeline_trans.png)
 
 
-## 4. Real Service Screen 
+## 4. Real Service Screenshot 
    
 **Front**    
 ![front](/assets/esg_media/webpage/kresg_front.png)    
