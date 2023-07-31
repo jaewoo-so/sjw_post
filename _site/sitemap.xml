@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://0.0.0.0:8700/about</loc>
-<lastmod>2023-07-31T10:41:13+09:00</lastmod>
+<lastmod>2023-07-31T13:25:26+09:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:8700/search</loc>
-<lastmod>2023-07-31T10:41:13+09:00</lastmod>
+<lastmod>2023-07-31T13:25:26+09:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:8700/2017/10/01/si-ge-thickness-and-composition-predict-system</loc>
@@ -27,6 +27,10 @@
 <url>
 <loc>http://0.0.0.0:8700/2020/09/01/tax-optimized-asset-management</loc>
 <lastmod>2020-09-01T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:8700/2021/04/01/esg-media-topic-classification-kr</loc>
+<lastmod>2021-04-01T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:8700/2022/06/01/clinical-decision-support-algorithm-to-anti-pd1-therapy</loc>
