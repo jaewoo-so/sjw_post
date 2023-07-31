@@ -4,9 +4,15 @@ title:  "Clinical decision support algorithm based on machine learning to assess
 tags: [publication_patents]
 ---
 
+---
 
-## A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program
-### 1020200076756 · Filed Jun 23, 2020
+**patent**    
+*A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program. 1020200076756 · Filed Jun 23, 2020*
+
+[Post]({{ site.baseurl }}{% link _posts/2019-12-24-Methods for providing information about responses to cancer immunotherapy and devices using the same.md %}) 
+
+---
+<br>
 
 # Summary 
 ---
