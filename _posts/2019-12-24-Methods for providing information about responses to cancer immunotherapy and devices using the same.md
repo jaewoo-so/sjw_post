@@ -11,7 +11,8 @@ tags: [publication_patents]
 
 ***Please refer to the following link***    
 <br>
-[Post](/_posts/2022-06-01-Clinical decision support algorithm to anti pd1 therapy.md)  
+[Post]({{ site.baseurl }}{{ site.url }}/posts/2022-06-01-Clinical decision support algorithm to anti pd1 therapy.md) 
+
 [Paper](https://www.ejcancer.com/article/S0959-8049(21)00328-2/fulltext#%20)  
 
 <br>
