@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Sidey</title>
- <link href="http://0.0.0.0:8701/atom.xml" rel="self"/>
- <link href="http://0.0.0.0:8701/"/>
- <updated>2023-07-21T23:11:30+09:00</updated>
- <id>http://0.0.0.0:8701</id>
+ <link href="http://0.0.0.0:8700/atom.xml" rel="self"/>
+ <link href="http://0.0.0.0:8700/"/>
+ <updated>2023-07-31T09:03:59+09:00</updated>
+ <id>http://0.0.0.0:8700</id>
  <author>
    <name></name>
    <email></email>
@@ -13,126 +13,30 @@
 
  
  <entry>
-   <title></title>
-   <link href="http://0.0.0.0:8701/2023/01/01/tax-optimized-asset-management"/>
+   <title>LLM Based SR Report Generating[kr]</title>
+   <link href="http://0.0.0.0:8700/2023/03/01/llm-based-sr-report-generating"/>
+   <updated>2023-03-01T00:00:00+09:00</updated>
+   <id>http://0.0.0.0:8700/2023/03/01/LLM Based SR Report Generating</id>
+   <content type="html">&lt;h3 id=&quot;in-progress&quot;&gt;In progress&lt;/h3&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Tax Optimized Asset management</title>
+   <link href="http://0.0.0.0:8700/2023/01/01/tax-optimized-asset-management"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2023/01/01/Tax Optimized Asset management</id>
-   <content type="html">&lt;ul&gt;
-  &lt;li&gt;일반적인 포트폴리오를 통해 자산관리 및 수익을 얻으려고 할때, 종목의 수익률을 최대화 하려고 한다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;하지만 금융 상품에 대해서 손익통산 및 이월공제가 가능하다면, 보유 포트폴리오 종목의 주가하락에 따른 손실을 기회로 포착하여 Loss를 실현함으로써  절세효과를 극대화하는 전략이 사용 가능해진다.&lt;br /&gt;
-이를 Tax-loss harvesting(TLH)라고 부르고, 포트폴리오 수익률 증대전략이 아닌 절세효과로 인해 알파수익을 추구하는 전략이다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;TLH는 취득원가 미만으로 떨어진 주식을 매도하여 손실을 확정하고 이익실현 가능한 주식
- 을 동시에 매도하여  납부세금을 절약하는 매매전략 (loss,gain 상쇄)&lt;/li&gt;
-&lt;/ul&gt;
+   <id>http://0.0.0.0:8700/2023/01/01/Tax Optimized Asset management</id>
+   <content type="html">&lt;p&gt;#&lt;/p&gt;
 
-&lt;p&gt;본 프로젝트는 주식 및 ETF의 포트폴리오&lt;/p&gt;
-
-&lt;p&gt;샘플 알고리즘&lt;/p&gt;
-
-&lt;p&gt;기술적 분석&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;PPO&lt;/li&gt;
-  &lt;li&gt;LSTM&lt;/li&gt;
-  &lt;li&gt;Deep Q-Learning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;강화학습의 리턴은 다음과 같이 설계하였다.&lt;/p&gt;
-
-\[return = 10\]
-
-&lt;p&gt;Supervised learning loss design&lt;/p&gt;
-
-&lt;p&gt;@@ loss 디자인&lt;/p&gt;
-
-&lt;p&gt;Reinforcement Learning Return design&lt;/p&gt;
-
-&lt;p&gt;state 
-action 
-reward&lt;/p&gt;
-
-&lt;p&gt;@@ loss 디자인&lt;/p&gt;
-
-&lt;p&gt;위와 같은 결과가 있지만, 실제 서비스에 적용하기는 어렵다는 결론을 내렸다. 그 이유는 사용자 입장에서 Black box 모델의 시뮬레이션 결과를 근거로 모델에 기반한 투자를 선택하기 쉽지 않기 때문이다. 
- 따라서 매우 단순한 loss-cut 전략의 파라미터를 최적화 하는데 ML모델을 사용해 보았다.&lt;/p&gt;
-
-&lt;p&gt;먼저 다음의 전제들을 가정했다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;주식 트랜드나 가격 예측은 불가능하다.&lt;/li&gt;
-  &lt;li&gt;주식 트랜드나 가격 예측은 어느정도는 가능하다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;1번의 경우 ML모델로 특정 패턴에 최적화된 loss-cut 파라미터를 찾아낼 수 가 없다. 따라서 랜덤 확률 프로세스를 사용하여,&lt;/p&gt;
-
-&lt;p&gt;2번의 경우는 reward&lt;/p&gt;
-
-&lt;h2 id=&quot;설계-근거&quot;&gt;#설계 근거&lt;/h2&gt;
-
-&lt;p&gt;## Why design $\text{Action Space} = { Buy,Sell }$?&lt;/p&gt;
-
-&lt;p&gt;일반적인 트레이딩이 아닌, tax 최적화를 위해, 이익실현 연기,
- 손해 확정 등의 액션도 가능하다. 하지만 간단하게 하기 위해 임의로 
- action space를 단순화 시켰다.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-only-single-asset&quot;&gt;Why only single asset?&lt;/h2&gt;
-
-&lt;p&gt;각 주가의 트랜드에 맞게 
-따라서 최적의 전략을 추천해주는 상위 모델이 따로 있다. 
-따라서 본 프로젝트에서는 많이 보이는 패턴의 종목에 최적화된 모델을 만드는 것이 우선적인 목표이다. 그리고 종목에 최적화된 모델이 완성 되면, 각 모델의 output을 reward로 하는 종목 추천 모델 훈련에 사용한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;tlh-평가-방법&quot;&gt;#TLH 평가 방법&lt;/h2&gt;
-&lt;p&gt;\(Value_{TLH} = min(G,L)(\tau_{t_1} - \tau_{t_2} + )\)&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;#Conclusion&lt;/h2&gt;
-
-&lt;p&gt;기존 기술적 분석 기반의 방법론들은 높은 수익률 생기는 주가의 패턴이 확실했다.&lt;/p&gt;
-
-&lt;p&gt;Machine Learning의 학습 기반 모델의 경우는 많은 주가 패턴 및 트랜드에서 기술적 분석 기반의 방법론들 보다는 수익률의 편차가 작았다.&lt;/p&gt;
-
-&lt;p&gt;@@ 상승, 박스, 하락 각각의 경우에 대한 기술적 분석 기반 방법 vs RL기반 , LSTM 기반 넣기&lt;/p&gt;
-
-&lt;p&gt;특히 Deep Learning 기반의 경우는 전처리가 중요하게 보인다.&lt;/p&gt;
-
-&lt;p&gt;@@ 스무딩 전 후 차이 예시&lt;/p&gt;
-
-&lt;h1 id=&quot;2-rl-기반&quot;&gt;2. RL 기반&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;2-return-모델링&quot;&gt;2. Return 모델링&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-시뮬레이션-결과&quot;&gt;3. 시뮬레이션 결과&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-rnn-기반&quot;&gt;3. RNN 기반&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;4-f&quot;&gt;4. F&lt;/h2&gt;
-
-&lt;p&gt;LSTM&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;전통적인 방법 vs RL&lt;/li&gt;
-  &lt;li&gt;종목에 따른 최적 방법론이 다르다.&lt;/li&gt;
-  &lt;li&gt;종목 구성 후&lt;/li&gt;
-  &lt;li&gt;확률 과정 vs ML Base
-    &lt;ul&gt;
-      &lt;li&gt;Shift&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;** 어떻게 no-free lnuch&lt;/p&gt;
-
+&lt;h3 id=&quot;in-progress&quot;&gt;In progress&lt;/h3&gt;
 </content>
  </entry>
  
  <entry>
    <title>ESG Media Machine-Learning Service Pipeline</title>
-   <link href="http://0.0.0.0:8701/2023/01/01/esg-media-ml-service"/>
+   <link href="http://0.0.0.0:8700/2023/01/01/esg-media-ml-service"/>
    <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2023/01/01/ESG Media ML Service</id>
+   <id>http://0.0.0.0:8700/2023/01/01/ESG Media ML Service</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://portal.kresg.co.kr&quot; style=&quot;color: blue; text-decoration: underline;&quot;&gt;KESG Media Portal Site&lt;/a&gt;&lt;/li&gt;
@@ -200,9 +104,9 @@ Therefore, self-healing-enabled Kubernetes automates these monitoring and repair
  
  <entry>
    <title>Clinical decision support algorithm based on machine learning to assess the clinical response to anti–pd-1 therapy</title>
-   <link href="http://0.0.0.0:8701/2022/06/01/clinical-decision-support-algorithm-to-anti-pd1-therapy"/>
+   <link href="http://0.0.0.0:8700/2022/06/01/clinical-decision-support-algorithm-to-anti-pd1-therapy"/>
    <updated>2022-06-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2022/06/01/Clinical decision support algorithm to anti pd1 therapy</id>
+   <id>http://0.0.0.0:8700/2022/06/01/Clinical decision support algorithm to anti pd1 therapy</id>
    <content type="html">&lt;h2 id=&quot;a-tissue-origin-prediction-device-method-of-predicting-the-tissue-origin-using-a-genome-data-and-computer-program&quot;&gt;A tissue origin prediction device, method of predicting the tissue origin using a genome data, and computer program&lt;/h2&gt;
 &lt;h3 id=&quot;1020200076756--filed-jun-23-2020&quot;&gt;1020200076756 · Filed Jun 23, 2020&lt;/h3&gt;
 
@@ -318,18 +222,18 @@ correlation = -0.44 and p-value = 8.1e-11. That is, it was not a strong relation
  
  <entry>
    <title>CTD-squared Pancancer Chemosensitivity DREAM Challenge</title>
-   <link href="http://0.0.0.0:8701/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
+   <link href="http://0.0.0.0:8700/2020/06/01/ctd-squared-pancancer-chemosensitivity-dream-challenge"/>
    <updated>2020-06-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2020/06/01/CTD squared Pancancer Chemosensitivity DREAM Challenge</id>
+   <id>http://0.0.0.0:8700/2020/06/01/CTD squared Pancancer Chemosensitivity DREAM Challenge</id>
    <content type="html">&lt;h1 id=&quot;gene-expression-searching-and-machine-learning-model-for-chemosensitivity-prediction&quot;&gt;Gene Expression Searching and machine learning model for Chemosensitivity Prediction&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;contents&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Data&lt;/li&gt;
   &lt;li&gt;Workflow &amp;amp; Key ideas&lt;/li&gt;
+  &lt;li&gt;Feature Engineering&lt;/li&gt;
   &lt;li&gt;Conclusion &amp;amp; Discussion&lt;/li&gt;
   &lt;li&gt;Reference&lt;/li&gt;
-  &lt;li&gt;Feature Engineering&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;ul&gt;
@@ -420,31 +324,7 @@ and we define average distance over each model.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;3-conclusion--discussion&quot;&gt;3. Conclusion &amp;amp; Discussion&lt;/h1&gt;
-&lt;p&gt;We started from the assumption that we could deduce the MoA of the drug via post-treatment gene expression on the drug.
-It is difficult to predict drug sensitivities that have specific targets and specific pathways(Koras, K et al. 2020). So, we recognized the need to make models for each drug, and we tried many things, such as looking at which gene has high coefficient for each drug by predicting AUC with only gene expression, in addition to the methods described above. Our experiments have also shown that it is better to make a model for each drugs than to use one model predicting the AUC for all drugs.
-Each cell line has its own unique characteristics, so it is very meaningful to use it as a feature that can explain it. Predicting the drug sensitivities for each cell line will be very useful in selecting cell lines in experimental screening and also valuable in the field of new drug development in reducing costs.
-Since we didn’t have enough time to find the optimal model, we had no choice but to use the naive experimental results, so I think we can improve the predictive performance through more accurate experiments.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4-references&quot;&gt;4. References&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;CTD-squared Pancancer Chemosensitivity DREAM Challenge (syn21763589)&lt;/li&gt;
-  &lt;li&gt;CTD-squared BeatAML DREAM Challenge (syn20940518)&lt;/li&gt;
-  &lt;li&gt;Rees, M., Seashore-Ludlow, B., Cheah, J., Adams, D., Price, E., Gill, S., Javaid, S., Coletti, M., Jones, V., Bodycombe, N., Soule, C., Alexander, B., Li, A., Montgomery, P., Kotz, J., Hon, C., Munoz, B., Liefeld, T., Dančík, V., Haber, D., Clish, C., Bittker, J., Palmer, M., Wagner, B., Clemons, P., Shamji, A., Schreiber, S. (2016). Correlating chemical sensitivity and basal gene expression reveals mechanism of action Nature Chemical Biology  12(2), 109-116. https://dx.doi.org/10.1038/nchembio.1986&lt;/li&gt;
-  &lt;li&gt;Subramanian, A., Narayan, R., Corsello, S., Peck, D., Natoli, T., Lu, X., Gould, J., Davis, J., Tubelli, A., Asiedu, J., Lahr, D., Hirschman, J., Liu, Z., Donahue, M., Julian, B., Khan, M., Wadden, D., Smith, I., Lam, D., Liberzon, A., Toder, C., Bagul, M., Orzechowski, M., Enache, O., Piccioni, F., Johnson, S., Lyons, N., Berger, A., Shamji, A., Brooks, A., Vrcic, A., Flynn, C., Rosains, J., Takeda, D., Hu, R., Davison, D., Lamb, J., Ardlie, K., Hogstrom, L., Greenside, P., Gray, N., Clemons, P., Silver, S., Wu, X., Zhao, W., Read-Button, W., Wu, X., Haggarty, S., Ronco, L., Boehm, J., Schreiber, S., Doench, J., Bittker, J., Root, D., Wong, B., Golub, T. (2017). A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles Cell 171(6), 1437 1452.e17. https://dx.doi.org/10.1016/j.cell.2017.10.049&lt;/li&gt;
-  &lt;li&gt;Szalai, B., Subramanian, V., Holland, C., Alföldi, R., Pusk, L., Saez-Rodriguez, J. (2019). Signatures of cell death and proliferation in perturbation transcriptomics data—from confounding factor to effective prediction Nucleic Acids Research  47(19), 10010-10026. https://dx.doi.org/10.1093/nar/gkz805&lt;/li&gt;
-  &lt;li&gt;Koras, K., Juraeva, D., Kreis, J., Mazur, J., Staub, E., Szczurek, E. (2020). Feature selection strategies for drug sensitivity prediction Scientific Reports 10(1), 9377. https://dx.doi.org/10.1038/s41598-020-65927-9&lt;/li&gt;
-  &lt;li&gt;Garcia-Alonso L, Holland C, Ibrahim M, Turei D, Saez-Rodriguez J (2019). “Benchmark and integration of resources for the estimation of human transcription factor activities.” Genome Research. doi: 10.1101/gr.240663.118.&lt;/li&gt;
-  &lt;li&gt;Schubert M, Klinger B, Klünemann M, Sieber A, Uhlitz F, Sauer S, Garnett MJ, Blüthgen N, Saez-Rodriguez J. “Perturbation-response genes reveal signaling footprints in cancer gene expression.” Nature Communications: 10.1038/s41467-017-02391-6&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;5-feature-engineering&quot;&gt;5. Feature Engineering&lt;/h1&gt;
+&lt;h1 id=&quot;3-feature-engineering&quot;&gt;3. Feature Engineering&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;1. Data Integration&lt;/strong&gt;   &lt;br /&gt;
 Different public datasets have different gene types. Alternatively, you can use a gene set that you deem valid based on domain knowledge. Strategies other than intersection result in missing value unconditionally. Therefore, the method of imputating the missing value must also be selected.     &lt;br /&gt;
@@ -493,14 +373,38 @@ This is why I used AE and cosine similarity as an evaluation metric.&lt;/p&gt;
 &lt;br /&gt;
 Experimentally tried several feature engineering and applied them because we achieved the best CV-score.&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;3-conclusion--discussion&quot;&gt;3. Conclusion &amp;amp; Discussion&lt;/h1&gt;
+&lt;p&gt;We started from the assumption that we could deduce the MoA of the drug via post-treatment gene expression on the drug.
+It is difficult to predict drug sensitivities that have specific targets and specific pathways(Koras, K et al. 2020). So, we recognized the need to make models for each drug, and we tried many things, such as looking at which gene has high coefficient for each drug by predicting AUC with only gene expression, in addition to the methods described above. Our experiments have also shown that it is better to make a model for each drugs than to use one model predicting the AUC for all drugs.
+Each cell line has its own unique characteristics, so it is very meaningful to use it as a feature that can explain it. Predicting the drug sensitivities for each cell line will be very useful in selecting cell lines in experimental screening and also valuable in the field of new drug development in reducing costs.
+Since we didn’t have enough time to find the optimal model, we had no choice but to use the naive experimental results, so I think we can improve the predictive performance through more accurate experiments.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;5-references&quot;&gt;5. References&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;CTD-squared Pancancer Chemosensitivity DREAM Challenge (syn21763589)&lt;/li&gt;
+  &lt;li&gt;CTD-squared BeatAML DREAM Challenge (syn20940518)&lt;/li&gt;
+  &lt;li&gt;Rees, M., Seashore-Ludlow, B., Cheah, J., Adams, D., Price, E., Gill, S., Javaid, S., Coletti, M., Jones, V., Bodycombe, N., Soule, C., Alexander, B., Li, A., Montgomery, P., Kotz, J., Hon, C., Munoz, B., Liefeld, T., Dančík, V., Haber, D., Clish, C., Bittker, J., Palmer, M., Wagner, B., Clemons, P., Shamji, A., Schreiber, S. (2016). Correlating chemical sensitivity and basal gene expression reveals mechanism of action Nature Chemical Biology  12(2), 109-116. https://dx.doi.org/10.1038/nchembio.1986&lt;/li&gt;
+  &lt;li&gt;Subramanian, A., Narayan, R., Corsello, S., Peck, D., Natoli, T., Lu, X., Gould, J., Davis, J., Tubelli, A., Asiedu, J., Lahr, D., Hirschman, J., Liu, Z., Donahue, M., Julian, B., Khan, M., Wadden, D., Smith, I., Lam, D., Liberzon, A., Toder, C., Bagul, M., Orzechowski, M., Enache, O., Piccioni, F., Johnson, S., Lyons, N., Berger, A., Shamji, A., Brooks, A., Vrcic, A., Flynn, C., Rosains, J., Takeda, D., Hu, R., Davison, D., Lamb, J., Ardlie, K., Hogstrom, L., Greenside, P., Gray, N., Clemons, P., Silver, S., Wu, X., Zhao, W., Read-Button, W., Wu, X., Haggarty, S., Ronco, L., Boehm, J., Schreiber, S., Doench, J., Bittker, J., Root, D., Wong, B., Golub, T. (2017). A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles Cell 171(6), 1437 1452.e17. https://dx.doi.org/10.1016/j.cell.2017.10.049&lt;/li&gt;
+  &lt;li&gt;Szalai, B., Subramanian, V., Holland, C., Alföldi, R., Pusk, L., Saez-Rodriguez, J. (2019). Signatures of cell death and proliferation in perturbation transcriptomics data—from confounding factor to effective prediction Nucleic Acids Research  47(19), 10010-10026. https://dx.doi.org/10.1093/nar/gkz805&lt;/li&gt;
+  &lt;li&gt;Koras, K., Juraeva, D., Kreis, J., Mazur, J., Staub, E., Szczurek, E. (2020). Feature selection strategies for drug sensitivity prediction Scientific Reports 10(1), 9377. https://dx.doi.org/10.1038/s41598-020-65927-9&lt;/li&gt;
+  &lt;li&gt;Garcia-Alonso L, Holland C, Ibrahim M, Turei D, Saez-Rodriguez J (2019). “Benchmark and integration of resources for the estimation of human transcription factor activities.” Genome Research. doi: 10.1101/gr.240663.118.&lt;/li&gt;
+  &lt;li&gt;Schubert M, Klinger B, Klünemann M, Sieber A, Uhlitz F, Sauer S, Garnett MJ, Blüthgen N, Saez-Rodriguez J. “Perturbation-response genes reveal signaling footprints in cancer gene expression.” Nature Communications: 10.1038/s41467-017-02391-6&lt;/li&gt;
+&lt;/ol&gt;
+
 </content>
  </entry>
  
  <entry>
    <title>Methods for providing information about responses to cancer immunotherapy and devices using the same</title>
-   <link href="http://0.0.0.0:8701/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same"/>
+   <link href="http://0.0.0.0:8700/2019/12/24/methods-for-providing-information-about-responses-to-cancer-immunotherapy-and-devices-using-the-same"/>
    <updated>2019-12-24T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same</id>
+   <id>http://0.0.0.0:8700/2019/12/24/Methods for providing information about responses to cancer immunotherapy and devices using the same</id>
    <content type="html">&lt;h2 id=&quot;info&quot;&gt;Info&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;10-2021-0081547&lt;/li&gt;
@@ -522,9 +426,9 @@ Experimentally tried several feature engineering and applied them because we ach
  
  <entry>
    <title>Gimhae Fire Prediction Competition</title>
-   <link href="http://0.0.0.0:8701/2019/12/01/gimhae-fire-prediction-competition"/>
+   <link href="http://0.0.0.0:8700/2019/12/01/gimhae-fire-prediction-competition"/>
    <updated>2019-12-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2019/12/01/Gimhae Fire Prediction Competition</id>
+   <id>http://0.0.0.0:8700/2019/12/01/Gimhae Fire Prediction Competition</id>
    <content type="html">&lt;p&gt;please go to below link for code and detail explain.
 Code and data available.
 &lt;a href=&quot;[/assets/2020/01_23/canberra.png](https://github.com/jaewoo-so/gimhae_fire_prediction)&quot;&gt;go to repository&lt;/a&gt;&lt;/p&gt;
@@ -696,38 +600,92 @@ Conversely, samples predicted as test data are also selected even though they ar
  </entry>
  
  <entry>
-   <title>Si-Ge Thickness and Composition Predict System[KR]</title>
-   <link href="http://0.0.0.0:8701/2017/03/01/si-ge-thickness-and-composition-predict-system"/>
-   <updated>2017-03-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2017/03/01/Si-Ge Thickness and Composition Predict System</id>
-   <content type="html">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+   <title>Si-Ge Thickness and Composition Predict System</title>
+   <link href="http://0.0.0.0:8700/2017/10/01/si-ge-thickness-and-composition-predict-system"/>
+   <updated>2017-10-01T00:00:00+09:00</updated>
+   <id>http://0.0.0.0:8700/2017/10/01/Si-Ge Thickness and Composition Predict System</id>
+   <content type="html">&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;Development of an epi-wafer thickness and composition ratio prediction model using Photoluminescence (PL) data. This research aims to build a machine learning model based on measured Photoluminescence phenomenon to minimize performance degradation and achieve cost reduction.&lt;/p&gt;
 
-&lt;h1 id=&quot;배경-및-목적&quot;&gt;배경 및 목적&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;What is Photoluminescence?&lt;/strong&gt; 
+Photoluminescence is a phenomenon observed in semiconductor wafers where they absorb light energy when exposed to laser irradiation and subsequently emit light. This principle is utilized in defect inspection by analyzing changes in light emission patterns caused by defects on wafers.&lt;/p&gt;
 
-&lt;h1 id=&quot;데이터&quot;&gt;데이터&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;The objective of this research is to maintain performance compared to a competitor’s product (KLA Tencor) while achieving cost reduction. Analysis indicates that the highest cost component in the competitor’s product is the nano-scale precision measurement with over 80 measurement sensors. Achieving nano-scale precision requires precision motors and vacuum stages, which are at least eight times more expensive than micro-meter motor-based products.&lt;/p&gt;
 
-&lt;h1 id=&quot;측정-방법&quot;&gt;측정 방법&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;solution&quot;&gt;Solution&lt;/h1&gt;
+&lt;hr /&gt;
 
-&lt;h1 id=&quot;방법&quot;&gt;방법&lt;/h1&gt;
-
-&lt;p&gt;나노 단위의 움직임을 위해서는 진공스테이지와 고정밀모터가 필요.&lt;/p&gt;
-
-&lt;h1 id=&quot;디스커션&quot;&gt;디스커션&lt;/h1&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Swarm Reinforcement Learning Algorithm with Characterized Agents</title>
-   <link href="http://0.0.0.0:8701/2015/03/01/swarm-reinforcement-learning-algorithm-with-characterized-agents"/>
-   <updated>2015-03-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8701/2015/03/01/Swarm Reinforcement Learning Algorithm with Characterized Agents</id>
-   <content type="html">&lt;ul&gt;
-  &lt;li&gt;에이전트 병렬 학습 최적화&lt;/li&gt;
-  &lt;li&gt;model free&lt;/li&gt;
+&lt;h2 id=&quot;pl-data-characteristics&quot;&gt;PL Data Characteristics&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Epi-wafer thickness and composition are continuous variables.&lt;/li&gt;
+  &lt;li&gt;Light emission quantities at different depths are measured based on wavelength, resulting in three-dimensional continuous data.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/2020/01_23/canberra.png&quot; alt=&quot;adasdasdasd&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Development of a machine learning model that predicts the value of a target point using surrounding point data.&lt;/li&gt;
+  &lt;li&gt;Change the measurement method to perform partial mapping only for points required for prediction, thereby reducing inspection time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;feature-selection&quot;&gt;Feature Selection&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Select the base model and conduct feature selection.&lt;/li&gt;
+  &lt;li&gt;The objective of feature selection is as follows:&lt;/li&gt;
+&lt;/ul&gt;
+
+\[Objective_{feature} =  Correlation + \alpha (\text{num_point} \times \text{sensor_price})\]
+
+&lt;h2 id=&quot;featrue-engineering&quot;&gt;Featrue Engineering&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Since there are no outliers, only scaling is performed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;edge-data-processing&quot;&gt;Edge Data Processing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;First, the predicted values are obtained using data up to just before the edge. Then, a spline fitting is applied to predict and generate edge data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;model-selection&quot;&gt;Model Selection&lt;/h2&gt;
+&lt;h3 id=&quot;experimental-results-model-and-feature-wise-performance-comparison&quot;&gt;Experimental results (model and feature-wise performance comparison)&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;600&quot; src=&quot;/assets/2017/sige_thickness/All.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;600&quot; src=&quot;/assets/2017/sige_thickness/performance_compare.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h1 id=&quot;achievements&quot;&gt;Achievements&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cost efficiency achieved at 32% compared to competitor’s product.&lt;/li&gt;
+  &lt;li&gt;Inspection speed achieved at 3 times faster compared to competitor’s product.&lt;/li&gt;
+  &lt;li&gt;Performance reached 87% of competitor’s product.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;system-architecture&quot;&gt;System Architecture&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;600&quot; src=&quot;/assets/2017/sige_thickness/IPS_Model1.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;final-result&quot;&gt;Final Result&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;600&quot; src=&quot;/assets/2017/sige_thickness/Analysis.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;600&quot; src=&quot;/assets/2017/sige_thickness/unisense_main.png&quot; /&gt;
+&lt;/p&gt;
 
 </content>
  </entry>

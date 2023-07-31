@@ -4,17 +4,17 @@ layout: default
 
 <section class="posts">
 
-<h2>2022 year</h2>
+<h2>2020 - 2023</h2>
 <ul>
-    {% for post in site.tags.year22 %}
+    {% for post in site.tags.time2 %}
     <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
     {% endfor %}
     </ul>
 <ul>
 
-<h2>2021 year</h2>
+<h2>2015 - 2019</h2>
 <ul>
-    {% for post in site.tags.year21 %}
+    {% for post in site.tags.time1 %}
     <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m" }}</time></li>
     {% endfor %}
     </ul>
