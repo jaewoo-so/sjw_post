@@ -14,10 +14,10 @@
     
         {
             "id": "http://0.0.0.0:8700/2023/03/01/llm-based-sr-report-generating",
-            "title": "LLM Based SR Report Generating[kr]",
+            "title": "LLM Based SR Report Generating",
             "summary": null,
-            "content_text": "IntroductionRecently, the majority of companies have been publishing Sustainability Reports (SR). However, due to a lack of ESG (Environmental, Social, and Governance) expertise, many companies outsource the report writing to ESG consulting firms. From the perspective of these consulting firms, they often lack knowledge of the specialized areas of the commissioning companies.For this project, we conducted a survey among employees experienced in writing SR reports to identify the stages that require the most time and effort. The interviews consistently revealed the two major challenges:Extracting keywords through company research and using them to craft appropriate sentences.Studying the commissioning company’s expertise to create relevant content.Among these, drafting content based on extracted keywords was the most time-consuming and challenging aspect. Hence, this project aims to address these issues to improve work efficiency.ObjectiveConsidering the automation potential and work processes involved in report production, our project has the following three objectives:Report Writing Style AutomationSentence Generation based on KeywordsImage Generation related to KeywordsThese objectives were determined through surveys and interviews.Survey Results    MethodologyIn the initial design phase, if a discrepancy of more than 1% occurs in the outputs, prompt designs are modified for effectiveness.However, if discrepancies are below 1%, unintended outputs are adjusted for consistency through post-processing at the code level.Fine-tuning for each sentence generation topic (e.g., precise and factual sentences for specialized terms rather than creative sentences).AchievementsApproximately 80% reduction in time taken for sentence and image composition.Average report writing time reduced from approximately 70 hours to less than 40 hours.Demo LinkDemo LinkFor the demo, we have utilized the SR report of Lego Chem Bio, adapted in a report writing style.The demo includes image generation in four different styles.",
-            "content_html": "<h1 id=\"introduction\">Introduction</h1><hr /><p>Recently, the majority of companies have been publishing Sustainability Reports (SR). However, due to a lack of ESG (Environmental, Social, and Governance) expertise, many companies outsource the report writing to ESG consulting firms. From the perspective of these consulting firms, they often lack knowledge of the specialized areas of the commissioning companies.</p><p>For this project, we conducted a survey among employees experienced in writing SR reports to identify the stages that require the most time and effort. The interviews consistently revealed the two major challenges:</p><p>Extracting keywords through company research and using them to craft appropriate sentences.Studying the commissioning company’s expertise to create relevant content.Among these, drafting content based on extracted keywords was the most time-consuming and challenging aspect. Hence, this project aims to address these issues to improve work efficiency.<br /></p><h1 id=\"objective\">Objective</h1><hr /><p>Considering the automation potential and work processes involved in report production, our project has the following three objectives:</p><p>Report Writing Style AutomationSentence Generation based on KeywordsImage Generation related to KeywordsThese objectives were determined through surveys and interviews.<br /></p><h1 id=\"survey-results\">Survey Results</h1><hr /><p align=\"center\">    <img width=\"800\" src=\"/assets/2023/llm/work_time_survey.jpg\" /></p><p><br /></p><h1 id=\"methodology\">Methodology</h1><hr /><p>In the initial design phase, if a discrepancy of more than 1% occurs in the outputs, prompt designs are modified for effectiveness.However, if discrepancies are below 1%, unintended outputs are adjusted for consistency through post-processing at the code level.Fine-tuning for each sentence generation topic (e.g., precise and factual sentences for specialized terms rather than creative sentences).AchievementsApproximately 80% reduction in time taken for sentence and image composition.Average report writing time reduced from approximately 70 hours to less than 40 hours.<br /></p><h1 id=\"demo-link\">Demo Link</h1><hr /><p><a href=\"http://report.jaewoo-so.online/\" style=\"color: blue; text-decoration: underline;\">Demo Link</a>For the demo, we have utilized the SR report of Lego Chem Bio, adapted in a report writing style.The demo includes image generation in four different styles.<br /></p>",
+            "content_text": "IntroductionRecently, the majority of companies have been publishing Sustainability Reports (SR). However, due to a lack of ESG (Environmental, Social, and Governance) expertise, many companies outsource the report writing to ESG consulting firms. From the perspective of these consulting firms, they often lack knowledge of the specialized areas of the commissioning companies.For this project, we conducted a survey among employees experienced in writing SR reports to identify the stages that require the most time and effort. The interviews consistently revealed the two major challenges:Extracting keywords through company research and using them to craft appropriate sentences.Studying the commissioning company’s expertise to create relevant content.Among these, drafting content based on extracted keywords was the most time-consuming and challenging aspect. Hence, this project aims to address these issues to improve work efficiency.ObjectiveConsidering the automation potential and work processes involved in report production, our project has the following three objectives:Report Writing Style AutomationSentence Generation based on KeywordsImage Generation related to KeywordsThese objectives were determined through surveys and interviews.Survey ResultsThe difficulty and specialization of an SR report can vary, but considering the criterion of one section and one image, it can be observed that a significant proportion of time is invested in the overall report writing process.&lt;/p&gt;        MethodologyIn the initial design phase, if a discrepancy of more than 1% occurs in the outputs, prompt designs are modified for effectiveness.However, if discrepancies are below 1%, unintended outputs are adjusted for consistency through post-processing at the code level.Fine-tuning for each sentence generation topic (e.g., precise and factual sentences for specialized terms rather than creative sentences).AchievementsApproximately 80% reduction in time taken for sentence and image composition.Average report writing time reduced from approximately 70 hours to less than 40 hours.Demo LinkDemo LinkFor the demo, we have utilized the SR report of Lego Chem Bio, adapted in a report writing style.The demo includes image generation in four different styles.",
+            "content_html": "<h1 id=\"introduction\">Introduction</h1><hr /><p>Recently, the majority of companies have been publishing Sustainability Reports (SR). However, due to a lack of ESG (Environmental, Social, and Governance) expertise, many companies outsource the report writing to ESG consulting firms. From the perspective of these consulting firms, they often lack knowledge of the specialized areas of the commissioning companies.</p><p>For this project, we conducted a survey among employees experienced in writing SR reports to identify the stages that require the most time and effort. The interviews consistently revealed the two major challenges:</p><p>Extracting keywords through company research and using them to craft appropriate sentences.Studying the commissioning company’s expertise to create relevant content.Among these, drafting content based on extracted keywords was the most time-consuming and challenging aspect. Hence, this project aims to address these issues to improve work efficiency.<br /></p><h1 id=\"objective\">Objective</h1><hr /><p>Considering the automation potential and work processes involved in report production, our project has the following three objectives:</p><p>Report Writing Style AutomationSentence Generation based on KeywordsImage Generation related to KeywordsThese objectives were determined through surveys and interviews.<br /></p><h1 id=\"survey-results\">Survey Results</h1><hr /><p>The difficulty and specialization of an SR report can vary, but considering the criterion of one section and one image, it can be observed that a significant proportion of time is invested in the overall report writing process.&lt;/p&gt;</p><p align=\"center\">    <img width=\"800\" src=\"/assets/2023/llm/survey1.png\" /></p><p align=\"center\">    <img width=\"800\" src=\"/assets/2023/llm/survey1.png\" /></p><p><br /></p><h1 id=\"methodology\">Methodology</h1><hr /><p>In the initial design phase, if a discrepancy of more than 1% occurs in the outputs, prompt designs are modified for effectiveness.However, if discrepancies are below 1%, unintended outputs are adjusted for consistency through post-processing at the code level.Fine-tuning for each sentence generation topic (e.g., precise and factual sentences for specialized terms rather than creative sentences).AchievementsApproximately 80% reduction in time taken for sentence and image composition.Average report writing time reduced from approximately 70 hours to less than 40 hours.<br /></p><h1 id=\"demo-link\">Demo Link</h1><hr /><p><a href=\"http://report.jaewoo-so.online/\" style=\"color: blue; text-decoration: underline;\">Demo Link</a>For the demo, we have utilized the SR report of Lego Chem Bio, adapted in a report writing style.The demo includes image generation in four different styles.<br /></p>",
             "url": "http://0.0.0.0:8700/2023/03/01/llm-based-sr-report-generating",
             
             
@@ -26,27 +26,6 @@
             
             "date_published": "2023-03-01T00:00:00+09:00",
             "date_modified": "2023-03-01T00:00:00+09:00",
-            
-                "author": 
-                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
-                
-            
-        },
-    
-        {
-            "id": "http://0.0.0.0:8700/2023/01/01/tax-optimized-asset-management",
-            "title": "Tax Optimized Asset management",
-            "summary": null,
-            "content_text": "#In progress",
-            "content_html": "<p>#</p><h3 id=\"in-progress\">In progress</h3>",
-            "url": "http://0.0.0.0:8700/2023/01/01/tax-optimized-asset-management",
-            
-            
-            
-            
-            
-            "date_published": "2023-01-01T00:00:00+09:00",
-            "date_modified": "2023-01-01T00:00:00+09:00",
             
                 "author": 
                 "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
@@ -89,6 +68,27 @@
             
             "date_published": "2022-06-01T00:00:00+09:00",
             "date_modified": "2022-06-01T00:00:00+09:00",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://0.0.0.0:8700/2020/09/01/tax-optimized-asset-management",
+            "title": "Tax Optimized Asset management",
+            "summary": null,
+            "content_text": "In progress",
+            "content_html": "<h3 id=\"in-progress\">In progress</h3>",
+            "url": "http://0.0.0.0:8700/2020/09/01/tax-optimized-asset-management",
+            
+            
+            
+            
+            
+            "date_published": "2020-09-01T00:00:00+09:00",
+            "date_modified": "2020-09-01T00:00:00+09:00",
             
                 "author": 
                 "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"

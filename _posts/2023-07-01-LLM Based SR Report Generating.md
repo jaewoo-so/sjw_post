@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LLM Based SR Report Generating[kr]"
+title:  "LLM Based SR Report Generating"
 date:   2023-03-01
 tags: [time2]
 ---
@@ -28,9 +28,14 @@ These objectives were determined through surveys and interviews.
 
 # Survey Results
 ---
+The difficulty and specialization of an SR report can vary, but considering the criterion of one section and one image, it can be observed that a significant proportion of time is invested in the overall report writing process.
+</p>
+<p align="center">
+    <img width="800" src="/assets/2023/llm/survey1.png">
+</p>
 
 <p align="center">
-    <img width="800" src="/assets/2023/llm/work_time_survey.jpg">
+    <img width="800" src="/assets/2023/llm/survey1.png">
 </p>
 <br>
 

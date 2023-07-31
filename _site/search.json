@@ -2,23 +2,12 @@
   
     {
 
-      "title"    : "LLM Based SR Report Generating[kr]",
+      "title"    : "LLM Based SR Report Generating",
       "description" : "",
       "url"      : "/2023/03/01/llm-based-sr-report-generating",
       "category" : "",
       "tags"     : "time2",
       "date"     : "2023-03-01 00:00:00 +0900"
-
-    } ,
-  
-    {
-
-      "title"    : "Tax Optimized Asset management",
-      "description" : "",
-      "url"      : "/2023/01/01/tax-optimized-asset-management",
-      "category" : "",
-      "tags"     : "time2",
-      "date"     : "2023-01-01 00:00:00 +0900"
 
     } ,
   
@@ -41,6 +30,17 @@
       "category" : "",
       "tags"     : "publication_patents",
       "date"     : "2022-06-01 00:00:00 +0900"
+
+    } ,
+  
+    {
+
+      "title"    : "Tax Optimized Asset management",
+      "description" : "",
+      "url"      : "/2020/09/01/tax-optimized-asset-management",
+      "category" : "",
+      "tags"     : "time2",
+      "date"     : "2020-09-01 00:00:00 +0900"
 
     } ,
   

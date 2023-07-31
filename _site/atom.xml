@@ -4,7 +4,7 @@
  <title>Sidey</title>
  <link href="http://0.0.0.0:8700/atom.xml" rel="self"/>
  <link href="http://0.0.0.0:8700/"/>
- <updated>2023-07-31T10:28:29+09:00</updated>
+ <updated>2023-07-31T10:41:13+09:00</updated>
  <id>http://0.0.0.0:8700</id>
  <author>
    <name></name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>LLM Based SR Report Generating[kr]</title>
+   <title>LLM Based SR Report Generating</title>
    <link href="http://0.0.0.0:8700/2023/03/01/llm-based-sr-report-generating"/>
    <updated>2023-03-01T00:00:00+09:00</updated>
    <id>http://0.0.0.0:8700/2023/03/01/LLM Based SR Report Generating</id>
@@ -40,9 +40,14 @@ These objectives were determined through surveys and interviews.
 
 &lt;h1 id=&quot;survey-results&quot;&gt;Survey Results&lt;/h1&gt;
 &lt;hr /&gt;
+&lt;p&gt;The difficulty and specialization of an SR report can vary, but considering the criterion of one section and one image, it can be observed that a significant proportion of time is invested in the overall report writing process.
+&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img width=&quot;800&quot; src=&quot;/assets/2023/llm/survey1.png&quot; /&gt;
+&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img width=&quot;800&quot; src=&quot;/assets/2023/llm/work_time_survey.jpg&quot; /&gt;
+    &lt;img width=&quot;800&quot; src=&quot;/assets/2023/llm/survey1.png&quot; /&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -62,17 +67,6 @@ Average report writing time reduced from approximately 70 hours to less than 40 
 For the demo, we have utilized the SR report of Lego Chem Bio, adapted in a report writing style.
 The demo includes image generation in four different styles.
 &lt;br /&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Tax Optimized Asset management</title>
-   <link href="http://0.0.0.0:8700/2023/01/01/tax-optimized-asset-management"/>
-   <updated>2023-01-01T00:00:00+09:00</updated>
-   <id>http://0.0.0.0:8700/2023/01/01/Tax Optimized Asset management</id>
-   <content type="html">&lt;p&gt;#&lt;/p&gt;
-
-&lt;h3 id=&quot;in-progress&quot;&gt;In progress&lt;/h3&gt;
 </content>
  </entry>
  
@@ -261,6 +255,15 @@ Since the data in the medical and bio fields are features that are difficult to 
 &lt;p&gt;Looking at the results, I suspected that the persistence of non-measurable lesions might have a high correlation with the target value. Thus, the persistence of non-measurable lesions is an ordinary type of data, so we look at spearman correlation.
 correlation = -0.44 and p-value = 8.1e-11. That is, it was not a strong relationship, so it was used as a feature.&lt;/p&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Tax Optimized Asset management</title>
+   <link href="http://0.0.0.0:8700/2020/09/01/tax-optimized-asset-management"/>
+   <updated>2020-09-01T00:00:00+09:00</updated>
+   <id>http://0.0.0.0:8700/2020/09/01/Tax Optimized Asset management</id>
+   <content type="html">&lt;h3 id=&quot;in-progress&quot;&gt;In progress&lt;/h3&gt;
 </content>
  </entry>
  
