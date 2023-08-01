@@ -52,6 +52,10 @@ Average report writing time reduced from approximately 70 hours to less than 40 
 # Demo Link
 ---
 <a href="http://report.jaewoo-so.online/" style="color: blue; text-decoration: underline;">Demo Link</a>
+<a href="http://report.jaewoo-so.online/" style="color: blue; text-decoration: underline;">Demo Result Report Link</a>
+
+[Demo Result Report Link]({ site.baseurl }/assets/2023/llm/sr_report_demo.pdf) 
+
 For the demo, we have utilized the SR report of Lego Chem Bio, adapted in a report writing style.
 The demo includes image generation in four different styles.
 <br>
