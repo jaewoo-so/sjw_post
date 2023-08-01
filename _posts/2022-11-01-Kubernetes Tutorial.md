@@ -2,7 +2,7 @@
 layout: post
 title:  "Kubernetes Tutorial"
 date:   2022-11-01
-tags: [time2]
+#tags: [time2]
 ---
 
 # 목적
