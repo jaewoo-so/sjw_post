@@ -4,6 +4,16 @@ layout: default
 
 <section class="posts">
 
+
+
+<ul>
+    {% for post in site.tags.resume %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+<ul>
+
+
 <h2>2020 - 2023</h2>
 <ul>
     {% for post in site.tags.time2 %}
