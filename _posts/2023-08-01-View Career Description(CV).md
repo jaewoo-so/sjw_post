@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "View Job Description - Korean"
+title:  "View Career Description/CV - Korean"
 date:   2023-08-01
 tags: [resume]
 ---
