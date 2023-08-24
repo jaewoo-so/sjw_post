@@ -180,7 +180,7 @@ $$p_{ij} = \frac{exp(- \vert x_i - x_j \vert^2 / 2 \sigma^2)}{\sum_{k \neq l} ex
 
 $$q_{ij} = \frac{ \left( 1 + \vert y_i - y_j \vert^2 \right)^{-1} }{\sum_{k \neq l} \left( 1 + \vert y_k - y_l \vert^2 \right)^{-1} }$$
 
-where $p_{ij}$ is high demensional space , and $q_{ij}$ is low demensional space. map of TSNE $h^*$ satisfies
+where $$p_{ij}$$ is high demensional space , and $$q_{ij}$$ is low demensional space. map of TSNE $$h^*$$ satisfies
 $$\argmin_{h^* \in H} |h^*(p_{ij}) - q_{ij}|$$
 
 ### [4] Binning Sample
@@ -189,7 +189,7 @@ $$\argmin_{h^* \in H} |h^*(p_{ij}) - q_{ij}|$$
 ### [5] Create Density Heatmap with hex space 
 <br>
 **Hexbin visualization**
-</p>
+
 <p align="center">
     <img width="800" src="/assets/2020/shareholding/HexPlot_Multi.png">
 </p>
