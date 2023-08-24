@@ -175,18 +175,13 @@ $$Impact_{company} = \text{impact of company node} +  \text{impact of indirect o
 ### [3] Projection 
 - Build map, \( H : \mathbb{R}^{33} \rightarrow \mathbb{R}^{2} \)
 - In this case, use TSNE algorithm
-
 **TSNE**
-\[
-p_{ij} = \frac{\exp(- \vert x_i - x_j \vert^2 / 2 \sigma^2)}{\sum_{k \neq l} \exp(- \vert x_k - x_l \vert^2 / 2 \sigma^2)}
-\]
-\[
-q_{ij} = \frac{ \left( 1 + \vert y_i - y_j \vert^2 \right)^{-1} }{\sum_{k \neq l} \left( 1 + \vert y_k - y_l \vert^2 \right)^{-1} }
-\]
-where \( p_{ij} \) is high dimensional space, and \( q_{ij} \) is low dimensional space. The map of TSNE \( h^* \) satisfies
-\[
-\argmin_{h^* \in H} |h^*(p_{ij}) - q_{ij}|
-\]
+$$p_{ij} = \frac{exp(- \vert x_i - x_j \vert^2 / 2 \sigma^2)}{\sum_{k \neq l} exp(- \vert x_k - x_l \vert^2 / 2 \sigma^2)}$$
+
+$$q_{ij} = \frac{ \left( 1 + \vert y_i - y_j \vert^2 \right)^{-1} }{\sum_{k \neq l} \left( 1 + \vert y_k - y_l \vert^2 \right)^{-1} }$$
+
+where $p_{ij}$ is high demensional space , and $q_{ij}$ is low demensional space. map of TSNE $h^*$ satisfies
+$$\argmin_{h^* \in H} |h^*(p_{ij}) - q_{ij}|$$
 
 ### [4] Binning Sample
 - binning each sample in 36 bin size
