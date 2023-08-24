@@ -154,17 +154,23 @@ Representation example is based on count=3.
 ### [2] Feature Extract : Include indirect ownership in centrality
 In this example, the most common importance is calculated.
 
-**1.To what extent does the ownership rate exert influence?**    
-- The value varies depending on the situation, so assumptions are made for all situations.    
-- In the case of Samsung, there were a total of 45 cases of shareholding rates, and each value is used as a Threshold. Thresholds below the holding rate are assumed to have no impact.
-- A total of 45 graphs are generated.
-**2.Calculate the 6 types of Centrality[1] for each graph.**    
-**3.Calculate the influence of indirect ownership**    
+**1. To what extent does the ownership rate exert influence?**    
+-The value varies depending on the situation, so assumptions are made for all situations.        
+-In the case of Samsung, there were a total of 45 cases of shareholding rates, and each value is used as a Threshold. Thresholds below the holding rate are assumed to have no impact.    
+-A total of 45 graphs are generated.    
+<br>
+
+**2. Calculate the 6 types of Centrality[1] for each graph.**    
+<br>
+
+**3. Calculate the influence of indirect ownership**    
   
 $$\text{Impact of indirect ownership} = \gamma^n * \text{Impact of end node}$$
 $$\text{ where } \gamma \text{ is discount factor} , n\text{ is depth of end node}$$
 
-**4.Calculate the impact of each node (company)**
+<br>
+
+**4. Calculate the impact of each node (company)**
 
 $$Impact_{company} = \text{impact of company node} +  \text{impact of indirect ownership}$$
 
