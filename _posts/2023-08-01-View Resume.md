@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "View Resume - Korean"
+title:  "View Resume"
 date:   2023-08-01
 tags: [resume]
 ---
