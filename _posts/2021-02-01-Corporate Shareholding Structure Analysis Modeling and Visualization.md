@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Corporate Shareholding Structure Analysis Modeling and Visualization"
-date:   2013-02-01
+date:   2021-02-01
 tags: [time2]
 ---
 # Introduction
@@ -35,81 +35,81 @@ In the Methodology Section, the following two models are explained:
 ## 1. Design of a network theory-based model
 ---
 ## Setting
-$V$ is set of nodes.
-$E \subseteq \{(x,y) | (x,y)\in V^2, x \neq y\}$
-$\mathcal{A} \in M_{m \times n}(\mathbb{R})$ is the adjacency matrix.
-$\mathcal{W} \in M_{m \times n}(\mathbb{R})$ is the edge weight matrix. (edge weight = ownership rate)
-where $w_{ij} \in \mathcal{W}$, $i$ is the start node (investing company), $j$ is the end node (investee company).
-$m$ = |investing companies|
-$n$ = |investee companies|  
+$$V$$ is set of nodes.
+$$E \subseteq \{(x,y) | (x,y)\in V^2, x \neq y\}$$
+$$\mathcal{A} \in M_{m \times n}(\mathbb{R})$$ is the adjacency matrix.
+$$\mathcal{W} \in M_{m \times n}(\mathbb{R})$$ is the edge weight matrix. (edge weight = ownership rate)
+where $$w_{ij} \in \mathcal{W}$$, $$i$$ is the start node (investing company), $$j$$ is the end node (investee company).
+$$m$$ = |investing companies|
+$$n$$ = |investee companies|  
 
-$\mathcal{Q} := \{ (\mathcal{W})_{ij} | (\mathcal{W})_{ij} > 0, i = 1,\ldots , m , j = 1,\ldots ,n \}$ is a set.
-$\mathcal{O} : \mathcal{Q} \times \mathbb{R} \rightarrow \mathbb{R}$ is a function, $\mathcal{O}(\mathcal{Q}, i )$ is the ith lowest element of $\mathcal{Q}$.
+$$\mathcal{Q} := \{ (\mathcal{W})_{ij} | (\mathcal{W})_{ij} > 0, i = 1,\ldots , m , j = 1,\ldots ,n \}$$ is a set.
+$$\mathcal{O} : \mathcal{Q} \times \mathbb{R} \rightarrow \mathbb{R}$$ is a function, $$\mathcal{O}(\mathcal{Q}, i )$$ is the ith lowest element of $$\mathcal{Q}$$.
 
-$T: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$ is a function, $T( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} (A)_{ij},&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$
+$$T: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$$ is a function, $$T( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} (A)_{ij},&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$$
 
-$B: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$ is a function, $B( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} 1,&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$
-where $A \in M_{m \times n}(\mathbb{R})$.
+$$B: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$$ is a function, $$B( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} 1,&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$$
+where $$A \in M_{m \times n}(\mathbb{R})$$.
 
-Original graph is $G = (V,E)$,
-Conditional graph $G|_{\text{Samsung Electronics}}$ means, Graph used only nodes that have a path to Samsung Electronics.
+Original graph is $$G = (V,E)$$,
+Conditional graph $$G|_{\text{Samsung Electronics}}$$ means, Graph used only nodes that have a path to Samsung Electronics.
 
 ---
 ## Visualization Method Design 
-[1] Representation of each node's Centrality (=$C(*)$)
-[2] Representation of core nodes based on Centrality (=$C_{core}$)
+[1] Representation of each node's Centrality (=$$C(*)$$)
+[2] Representation of core nodes based on Centrality (=$$C_{core}$$)
 [3] Relationship representation between core nodes : Presence or absence of a path (= R)
 [4] Representation of the conditional graph for each core node
 [5] Limitation of nodes used for readability in conditional graph representation (= D)
 
-According to these rules, $G \rightarrow G^* := (V,E,C,R,D)$.
+According to these rules, $$G \rightarrow G^* := (V,E,C,R,D)$$.
 
 ---
 ## Methodology : version02
-- To create G*, define $C,R,D$(+ $C_{core}$) according to the purpose.
-- In version 02, $C,R,D$(+ $C_{core}$) are defined as follows.
+- To create G*, define $$C,R,D$$(+ $$C_{core}$$) according to the purpose.
+- In version 02, $$C,R,D$$(+ $$C_{core}$$) are defined as follows.
 
 ### Def : Centrality
 
-- (1) The number of existing ownership relationships (= $dc$)
-- (2) The number of being a bridge in ownership relationships ($cbc$)
-- (3) The number of companies holding ownership (= $dc_{in}$)
+- (1) The number of existing ownership relationships (= $$dc$$)
+- (2) The number of being a bridge in ownership relationships ($$cbc$$)
+- (3) The number of companies holding ownership (= $$dc_{in}$$)
 Average of,
 $$C(v) = w_{dc}*dc(v) + w_{cbc}*cdc(v) + w_{dc_{in}}*dc_{in}(v) \: ,v \in V$$
-Representation is $C(v) = node \, size$.
+Representation is $$C(v) = node \, size$$.
 
 ### Def : Relation
-If there is an edge (ownership presence) between core nodes $\rightarrow$, if not $\cdots >$.
+If there is an edge (ownership presence) between core nodes $$\rightarrow$$, if not $$\cdots >$$.
 
 ### Def : Depth
-Higher path (=$P_h$) is defined as follows.
-$P_h := \{ path(x,y) | x,y \in V , path(x,y) \text{ is not subpath for any path} \}$
+Higher path (=$$P_h$$) is defined as follows.
+$$P_h := \{ path(x,y) | x,y \in V , path(x,y) \text{ is not subpath for any path} \}$$
 
 Depth is defined as follows.
-$D(x,y) = D_x(y)= |path(x,y) \in P_h|$ 
+$$D(x,y) = D_x(y)= |path(x,y) \in P_h|$$ 
 End node y is only included in higher path, distance on the higher path.
 
 ---
 ## Detail : version02
 
-### [1] $dc,cbc,dc_{in}$ 
+### [1] $$dc,cbc,dc_{in}$$ 
 *If you use the existing definition as it is, the ownership rate information is not reflected, so use it modified.*
 
-- $dc$ : degree centrality.
-- $cbc$ : communicability betweenness centrality.
-- $dc_{in}$ : in degree centrality.
+- $$dc$$ : degree centrality.
+- $$cbc$$ : communicability betweenness centrality.
+- $$dc_{in}$$ : in degree centrality.
 
-$dc,cbc,dc_{in} : M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow \mathbb{R}$, are functions.
+$$dc,cbc,dc_{in} : M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow \mathbb{R}$$, are functions.
 
-$dc_t , cbc_t , dc_{int}$ are modified scores, defined by
+$$dc_t , cbc_t , dc_{int}$$ are modified scores, defined by
 $$dc_t(v) = \frac{1}{|\mathcal{Q}|} \sum_{i = 1}^{\mathcal{|Q|}} dc(v|B(\mathcal{W}, \mathcal{O}(\mathcal{Q},i))$$
 $$cbc_t(v) = \frac{1}{|\mathcal{Q}|} \sum_{i = 1}^{\mathcal{|Q|}} cbc(v|B(\mathcal{W},\mathcal{O}(\mathcal{Q},i))$$
 $$dc_{int}(v) = \frac{1}{|\mathcal{Q}|} \sum_{i = 1}^{\mathcal{|Q|}} dc_{in}(v|T(\mathcal{W},\mathcal{O}(\mathcal{Q},i))$$
 
-Centrality score of $v$ is 
+Centrality score of $$v$$ is 
 $$C(v) = dc_t(v) + cbc_t(v) + dc_{int}(v)$$
 
-### [2] $C_{core}$ 
+### [2] $$C_{core}$$ 
 Using IQR for outlier detection (count = 3).
 $$C_{core} = \{C(v) | C(v) \geq Q_3 + IQR \}$$
 
