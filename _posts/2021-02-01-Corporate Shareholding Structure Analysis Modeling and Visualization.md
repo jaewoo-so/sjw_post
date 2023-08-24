@@ -47,9 +47,11 @@ $$n$$ = |investee companies|
 $$\mathcal{Q} := \{ (\mathcal{W})_{ij} | (\mathcal{W})_{ij} > 0, i = 1,\ldots , m , j = 1,\ldots ,n \}$$ is a set.    
 $$\mathcal{O} : \mathcal{Q} \times \mathbb{R} \rightarrow \mathbb{R}$$ is a function, $$\mathcal{O}(\mathcal{Q}, i )$$ is the ith lowest element of $$\mathcal{Q}$$.    
 <br>
-$$T: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$$ is a function, $$T( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} (A)_{ij},&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$$    
+$$T: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$$ is a function,     
+$$T( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} (A)_{ij},&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$$      
 <br>
-$$B: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$$ is a function, $$B( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} 1,&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$$    
+$$B: M_{m \times n}(\mathbb{R}) \times \mathbb{R} \rightarrow M_{m \times n}(\mathbb{R})$$ is a function,     
+$$B( A , c ) = \{ (A)_{ij} | (A)_{ij} = \begin{cases} 1,&\text{if}\ (A)_{ij} > c \\0, & \text{otherwise} \end{cases} \}$$       
 where $$A \in M_{m \times n}(\mathbb{R})$$.
 <br>
 Original graph is $$G = (V,E)$$,    
