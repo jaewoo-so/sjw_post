@@ -176,8 +176,8 @@ $$Impact_{company} = \text{impact of company node} +  \text{impact of indirect o
 
 
 ### [3] Projection 
--Build map,  $$H : \mathbb{R}^{33} \rightarrow \mathbb{R}^{2}$$
--In this case, use TSNE algorithm   
+- Build map,  $$H : \mathbb{R}^{33} \rightarrow \mathbb{R}^{2}$$
+- In this case, use TSNE algorithm   
 <br>
 **TSNE**      
 $$p_{ij} = \frac{exp(- \vert x_i - x_j \vert^2 / 2 \sigma^2)}    {\sum_{k \neq l} exp(- \vert x_k - x_l \vert^2 / 2 \sigma^2)}$$
