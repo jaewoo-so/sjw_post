@@ -1,24 +1,24 @@
 ---
 layout: post
-title:  "Corporate Shareholding Structure Analysis Modeling and Visualization"
+title:  "Corporate Ownership Structure Analysis Modeling and Visualization"
 date:   2021-02-01
 tags: [time2]
 ---
 # Introduction
 ---
-For the analysis of governance risk in ESG consulting for business strategies and subsidiaries, it's essential to understand the shareholding structure of the group companies. However, for large group companies with very complex ownership structures, a simple schematic of shareholdings is not sufficient for analysis.
+For the analysis of governance risk in ESG consulting for business strategies and subsidiaries, it's essential to understand the Ownership structure of the group companies. However, for large group companies with very complex ownership structures, a simple schematic of Ownerships is not sufficient for analysis.
 
-Moreover, in the shareholding structure, there exists **indirect ownership, which is not covered in standard graph theory's Centrality**.
+Moreover, in the Ownership structure, there exists **indirect ownership, which is not covered in standard graph theory's Centrality**.
 
-Considering these factors, this project aims to extract numerical results for desired insights through the shareholding structure data of group companies with complex ownership structures. It also focuses on modeling to easily understand the relationships between the constituent companies. Finally, this model is visualized effectively to be utilized in forming business strategies and consulting.
+Considering these factors, this project aims to extract numerical results for desired insights through the Ownership structure data of group companies with complex ownership structures. It also focuses on modeling to easily understand the relationships between the constituent companies. Finally, this model is visualized effectively to be utilized in forming business strategies and consulting.
 
 <br>
 
 # Methodology
 ---
-In this post, Samsung Group is taken as an example. The shareholding structure of Samsung Group is as follows:
+In this post, Samsung Group is taken as an example. The Ownership structure of Samsung Group is as follows:
 <p align="center">
-    <img width="800" src="/assets/2020/shareholding/samsung_structure.png">
+    <img width="800" src="/assets/2020/Ownership/samsung_structure.png">
 </p>
 
 Initially, a network theory-based model was designed, but the visibility was very poor due to complexity when visualized. Therefore, the network theory-based model was revised for visualization in the hexbin style.
@@ -156,7 +156,7 @@ In this example, the most common importance is calculated.
 
 **1. To what extent does the ownership rate exert influence?**    
 -The value varies depending on the situation, so assumptions are made for all situations.        
--In the case of Samsung, there were a total of 45 cases of shareholding rates, and each value is used as a Threshold. Thresholds below the holding rate are assumed to have no impact.    
+-In the case of Samsung, there were a total of 45 cases of Ownership rates, and each value is used as a Threshold. Thresholds below the holding rate are assumed to have no impact.    
 -A total of 45 graphs are generated.    
 <br>
 
@@ -193,7 +193,7 @@ $$argmin_{h^* \in H} |h^*(p_{ij}) - q_{ij}|$$
 **Hexbin visualization**
 
 <p align="center">
-    <img width="800" src="/assets/2020/shareholding/HexPlot_Multi.png">
+    <img width="800" src="/assets/2020/Ownership/HexPlot_Multi.png">
 </p>
 
 ---
