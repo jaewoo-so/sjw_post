@@ -18,7 +18,7 @@ Considering these factors, this project aims to extract numerical results for de
 ---
 In this post, Samsung Group is taken as an example. The Ownership structure of Samsung Group is as follows:
 <p align="center">
-    <img width="800" src="/assets/2020/Ownership/samsung_structure.png">
+    <img width="800" src="/assets/2020/ownership/samsung_structure.png">
 </p>
 
 Initially, a network theory-based model was designed, but the visibility was very poor due to complexity when visualized. Therefore, the network theory-based model was revised for visualization in the hexbin style.
@@ -193,7 +193,7 @@ $$argmin_{h^* \in H} |h^*(p_{ij}) - q_{ij}|$$
 **Hexbin visualization**
 
 <p align="center">
-    <img width="800" src="/assets/2020/Ownership/HexPlot_Multi.png">
+    <img width="800" src="/assets/2020/ownership/HexPlot_Multi.png">
 </p>
 
 ---
