@@ -68,9 +68,9 @@ Conditional graph $$G|_{\text{Samsung Electronics}}$$ means, Graph used only nod
 According to these rules, $$G \rightarrow G^* := (V,E,C,R,D)$$.    
 
 ---
-## Methodology : version02
+## Methodology
 - To create G*, define $$C,R,D$$(+ $$C_{core}$$) according to the purpose.    
-- In version 02, $$C,R,D$$(+ $$C_{core}$$) are defined as follows.    
+- $$C,R,D$$(+ $$C_{core}$$) are defined as follows.    
 
 ### Def : Centrality
 
@@ -93,7 +93,7 @@ $$D(x,y) = D_x(y)= |path(x,y) \in P_h|$$
 End node y is only included in higher path, distance on the higher path.     
 
 ---
-## Detail : version02
+## Detail
 
 ### [1] $$dc,cbc,dc_{in}$$ 
 *If you use the existing definition as it is, the ownership rate information is not reflected, so use it modified.*
