@@ -6,6 +6,9 @@ tags: [competitions]
 
 # Gene Expression Searching and machine learning model for Chemosensitivity Prediction
 ---
+**Link**    
+- <a href="https://www.synapse.org/#!Synapse:syn21763589/wiki/601659" style="color: blue; text-decoration: underline;">Competetion Link</a>
+
 ***contents***  
 1. Data
 2. Workflow & Key ideas

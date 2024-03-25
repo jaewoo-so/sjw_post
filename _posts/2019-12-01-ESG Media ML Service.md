@@ -7,7 +7,7 @@ tags: [time2]
 
 **Link**    
 - <a href="http://portal.kresg.co.kr" style="color: blue; text-decoration: underline;">KESG Media Portal Site</a>
-- [Tutorial : Simple ML Pipeline with Kubernetes + Restful API ]()    
+   
 
 
 **Service Infra**    
